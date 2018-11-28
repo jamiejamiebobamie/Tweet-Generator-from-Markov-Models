@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamiejamiebobamie/tweet-generator.git"
+    "url": "git+https://github.com/jamiejamiebobamie/tweet-gen-js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jamiejamiebobamie/tweet-generator/issues"
+    "url": "https://github.com/jamiejamiebobamie/tweet-gen-js/issues"
   },
-  "homepage": "https://github.com/jamiejamiebobamie/tweet-generator#readme"
+  "homepage": "https://github.com/jamiejamiebobamie/tweet-gen-js#readme"
 }
