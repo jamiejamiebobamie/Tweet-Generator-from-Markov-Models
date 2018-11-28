@@ -1,0 +1,54 @@
+/* Style the video: 100% width and height to cover the entire window */
+
+.dynamic, .static {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+}
+
+.dynamic{
+    z-index: 1
+}
+
+
+.button {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    z-index:1;
+    float:left;
+    animation: pulse 5s infinite;
+}
+
+
+body {background-color: pink;}
+
+h1 {
+    color: pink;
+}
+
+/*
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+*/
+
+/*
+container { position:relative; }
+.container video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+*/

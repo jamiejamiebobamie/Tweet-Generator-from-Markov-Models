@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dead-Writer Tweets</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400|Roboto:100,200,300,400" rel="stylesheet"> -->
+
+    <!-- Link in our stylesheet -->
+    <link re="stylesheet" type="text/css" href=".../static/tweet.css">
+    <!-- Make sure this is inside of our <head> -->
+
+    <style>
+
+
+    /* .video-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+     object-fit: cover;
+    }
+
+    .video-container video {
+
+      min-width: 100%;
+      min-height: 100%;
+
+      width: auto;
+      height: auto;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    } */
+
+
+    .test{
+        z-index:2;
+        position: absolute;
+        opacity: 0.9;
+        height: 100px;
+        width: 50%;
+        float:left;
+        top: 15px;
+        right:13%;
+        margin-left:-150px;
+    }
+
+    .dynamic, .static {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    }
+
+    .dynamic{
+        z-index: 1
+    }
+
+    .jar_button{
+        z-index:2;
+        position: absolute;
+        opacity: 0;
+        height: 100px;
+        width: 50%;
+        float:left;
+        bottom: 15px;
+        left:13%;
+        margin-left:-150px;
+    }
+
+    .tweet_button{
+        z-index:2;
+        position: absolute;
+        opacity: 0;
+        height: 100px;
+        width: 50%;
+        float:left;
+        bottom: 15px;
+        right:13%;
+        margin-right:-50px;
+    }
+
+     .buttons{
+        font-size:0;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        font-size: 30px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        left:23.1%;
+    }
+
+.Grimm{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 350px;
+    left:20%;
+    margin-left:-150px;
+    transform: rotate(5deg);
+    border-radius: 10px;
+}
+
+.Poe{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 330px;
+    left:32.3%;
+    margin-left:-150px;
+    transform: rotate(3deg);
+    border-radius: 10px;
+}
+
+.Wilde{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 360px;
+    left:40.1%;
+    margin-left:-150px;
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Woolf{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 350px;
+    left:44.9%;
+    margin-left:-150px;
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Carroll{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 350px;
+    left:51.6%;
+    margin-left:-150px;
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+
+.Shakespeare{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 360px;
+    left:57.2%;
+    margin-left:-150px;
+    /* transform: rotate(1deg); */
+    border-radius: 10px;
+}
+
+
+.Lovecraft{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 370px;
+    left:63.2%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.tweet_button{
+    /* background: orange; */
+    z-index:3;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 175px;
+    left:94.2%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.tweet_image{
+    /* background: orange; */
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .9;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 175.5px;
+    left:95%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.jar_button{
+    /* background: orange; */
+    z-index:3;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 194px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.jar_image{
+    /* background: orange; */
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .9;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 160px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+input[type="button"]{
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ appearance: none;
+}
+
+.buttons:hover {
+    opacity: 1;
+}
+
+    body {background-color: black;}
+
+    h1 {
+        animation: pulse 5s infinite;
+        color: orange;
+        position: absolute;
+        z-index: 10;
+        font-family: monospace;
+        size: 10px;
+        opacity: 0;
+    }
+
+    </style>
+
+  </head>
+
+
+
+ <body bgcolor="#E6E6FA">
+
+     <div class="video-container">
+
+  <div class="dynamic">
+  <video autoplay muted loop id="myVideo">
+    <source src="../finals/1door-closed-A.mp4" type="video/mp4">
+  </video>
+  </div>
+
+  <div class="static">
+  <video autoplay muted loop id="myVideo-background">
+    <source src="../finals/1door-closed-A.mp4" type="video/mp4">
+  </video>
+  </div>
+</div>
+
+
+<div class="jar_button">
+    <input id="jar" style="width:130px;height:130px;border-radius: 12px;" type="button" value="jar" >
+</div>
+
+<div class="jar_image">
+    <img src="../public/jar-icon-symbol copy 2.png" width="130" height="130"/>
+</div>
+
+<div class="tweet_button">
+    <input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" >
+</div>
+
+<div class="tweet_image">
+    <img src="../public/tweet-icon-symbol2 copy.png" width="80" height="80"/>
+</div>
+
+<div class="Grimm">
+<input id="Grimm" style="width:205px;height:185px;border-radius: 12px;" type="button" value="The Brothers Grimm" >
+</div>
+
+<div class="Poe">
+<input id="Poe" style="width:115px;height:130px;border-radius: 12px;" type="button" value="Edgar Allan Poe" >
+</div>
+
+<div class="Wilde">
+<input id="Wilde" style="width:80px;height:160px;border-radius: 12px;" type="button" value="Oscar Wilde" >
+</div>
+
+<div class="Woolf">
+<input id="Woolf" style="width:90px;height:100px;border-radius: 12px;" type="button" value="Virginia Woolf" >
+</div>
+
+<div class="Carroll">
+<input id="Carroll" style="width:90px;height:100px;border-radius: 12px;" type="button" value="Lewis Carroll" >
+</div>
+
+<div class="Shakespeare">
+<input id="Shakespeare" style="width:80px;height:200px;border-radius: 12px;" type="button" value="William Shakespeare" >
+</div>
+
+<div class="Lovecraft">
+<input id="Lovecraft" style="width:200px;height:120px;border-radius: 12px;" type="button" value="HP Lovecraft" >
+</div>
+
+<div class="buttons">
+<input id="Keep" type="button" value="Keep" >
+</div>
+
+<h1 id="title">helo hllo</h1>
+
+<!-- <div class="test">
+     <input id="butt" type="button" value="Try it">
+</div> -->
+
+     <script>
+        fetch('path/to/file').then((res) => {
+            return res.text()
+        }).then((textData) => {
+            console.log(textData)
+            run()
+        }).catch((err) => {
+            console.log(err.message)
+        })
+
+      const button_11 = document.getElementById("butt");
+      var titleElement = document.getElementById('title');
+      var remote = require("remote");
+      var fs = remote.require("fs");
+
+    {
+      function chooseRandomFile(){
+          var files = ["Wilde.md", "Shakespeare.md", "Grimm.md", "Carroll.md", "Lovecraft.md", "Woolf.md", "Poe.md"];
+          return files[Math.floor(Math.random() * Math.floor(files.length))];
+      }
+
+      function fileToArray(file){
+          var text = fs.readFileSync(file).toString('utf-8');
+          var words = text.split(" ");
+          return words;
+      }
+
+       function arrayToString(array){
+           var string = "";
+           var i;
+           for (i = 0; i < array.length; i++) {
+               string += array[i].toString('utf-8') + " "};
+           return string;
+      }
+
+      function wordBeforeAfter(array, word, n) {
+         var instances = [];
+         for (var i = 0; i < array.length; i++) {
+             if (array[i] == word){
+                 var x = i - 1;
+                 var beforeWords = [];
+                 while (x > i - n) {
+                  beforeWords.push(array[x]);
+                      x -= 1;
+                      }
+                      var myInstance = [word, beforeWords, array[i+1]];
+                      instances.push(myInstance);
+                      }
+                   }
+                   return instances;
+                 }
+
+      function nextWords(instances) {
+          var lenInt = 0;
+          var next = {};
+          for (var i = 0; i < instances.length; i++) {
+              if (instances[i][2] in next) {
+                  next[instances[i][2]] += 1;
+              } else {
+                  next[instances[i][2]] = 1;
+              }
+              if (lenInt < next[instances[i][2]]){
+                  lenInt = next[instances[i][2]];
+              };
+          }
+          return ([next, lenInt]);
+      };
+
+      function pickRand(nexts){
+          var rand = Math.floor(Math.random() * Math.floor(nexts[1]));
+          if (rand != 0){
+              return rand;
+          } else {
+              return 1;
+          }
+      }
+
+      function valuestoKeys(nexts){
+          var max = nexts[1];
+          var newDict = {};
+          var arrKeys = Object.keys(nexts[0]);
+          var arrValues = Object.values(nexts[0]);
+          for (var i = 0; i < arrValues.length; i++){
+              if (arrValues[i] in newDict) {
+              newDict[arrValues[i]].push(arrKeys[i]);
+          } else {
+              newDict[arrValues[i]] = [arrKeys[i]];
+          }
+          }
+          return newDict;
+      }
+
+     function run(){
+      var n = 6;
+      var file = chooseRandomFile();
+      var fileArray = fileToArray(file);
+      var word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))];
+      var tweet = word;
+
+      while (tweet.length < 110) {
+          var wBA = wordBeforeAfter(fileArray, word, n); // file to array of words
+          var nexts = nextWords(wBA); // next words
+          var max = nexts[1]; // max frequency (the frequency of the most likely next word)
+          var vTK = valuestoKeys(nexts); // dictionary of frequencies and arrays of words
+          var keysvTK = Object.keys(vTK); // array of keys of frequencies
+          var v = Math.floor(Math.random() * Math.floor(keysvTK.length)); // random index out of the array of keys of frequencies
+          word = vTK[keysvTK[v]][Math.floor(Math.random() * Math.floor(vTK[keysvTK[v]].length - 1))]; // random index out of the array of words for frequency 'v'
+          tweet = tweet + " " + word; // 'word' NOT WEIGHTED -- HOW TO IMPLEMENT??
+      }
+
+      var punc = [".", "!", "?", ";", ",", "\'", "\""];
+
+      tweet = tweet + "." + " -" + file;
+      tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
+
+      return tweet};
+  }
+
+     button_11.addEventListener('click', function(e){
+     var tweet = run();
+     titleElement.innerHTML = tweet;
+ })
+
+     </script>
+
+
+<!-- <div class="dynamic">
+<video autoplay muted loop id="myVideo">
+  <source src="../finals/1door-closed-A.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="static">
+<video autoplay muted loop id="myVideo-background">
+  <source src="../finals/1door-closed-A.mp4" type="video/mp4">
+</video>
+</div> -->
+
+<script src="../tweet.js"></script>
+
+<script>
+var video = document.getElementById("myVideo");
+video.playbackRate = 1;
+
+const button_1 = document.getElementById("Grimm");
+const button_2 = document.getElementById("Poe");
+const button_3 = document.getElementById("Wilde");
+const button_4 = document.getElementById("Woolf");
+const button_5 = document.getElementById("Carroll");
+const button_6 = document.getElementById("Shakespeare");
+const button_7 = document.getElementById("Lovecraft");
+const button_8 = document.getElementById("Tweet");
+const button_9 = document.getElementById("Keep");
+
+const button_10 = document.getElementById("jar");
+
+var titleElement = document.getElementById('title');
+var open = false;
+var tweet;
+
+var clip = "../finals/5door-closed-C.mp4";
+const clips = ["../finals/jar1-final.mp4", "../finals/jar2-final-C.mp4", "../finals/jar3-final-D.mp4", "../finals/jar4-final-F.mp4", "../finals/jar5-final-F.mp4", "../finals/jar6-final-B.mp4", "../finals/jar7-final-B.mp4", "../finals/2door-opening.mp4", "../finals/3door open.mp4", "../finals/4door-closing.mp4", "../finals/1door-closed-A.mp4"]
+const shocks = ["../finals/jar1-final.mp4", "../finals/jar2-final-C.mp4", "../finals/jar3-final-D.mp4", "../finals/jar4-final-F.mp4", "../finals/jar5-final-F.mp4", "../finals/jar6-final-B.mp4", "../finals/jar7-final-B.mp4"]
+
+button_1.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+//    titleElement.innerHTML = "grimm";
+    video.setAttribute("src", clips[0]);
+    video.load();
+    video.playbackRate = 1.2;
+    video.loop = false;
+    tweet = run();
+    titleElement.innerHTML = tweet;
+})
+
+button_2.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+
+    video.setAttribute("src", clips[1]);
+    video.load();
+    video.playbackRate = 1.7;
+    video.loop = false;
+    titleElement.innerHTML = 'pee';
+})
+
+button_3.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[2]);
+    video.load();
+    video.playbackRate = 1.4;
+    video.loop = false;
+})
+
+button_4.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[3]);
+    video.load();
+    video.playbackRate = 1.5;
+    video.loop = false;
+})
+
+button_5.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[4]);
+    video.load();
+    video.playbackRate = 1.4;
+    video.loop = false;
+})
+
+button_6.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[5]);
+    video.load();
+    video.playbackRate = 1.7;
+    video.loop = false;
+})
+
+button_7.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[6]);
+    video.load();
+    video.playbackRate = 1.7;
+    video.loop = false;
+})
+
+button_8.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[7]);
+    video.load();
+    video.playbackRate = 1;
+    video.loop = false;
+    open = true;
+})
+
+button_9.addEventListener('click', function(e){
+    //num = Math.floor(Math.random() * Math.floor(clips.length))
+    video.setAttribute("src", clips[9]);
+    video.load();
+    video.playbackRate = 1;
+    video.loop = false;
+    open = false;
+})
+
+button_10.addEventListener('click', function(e){
+    video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
+    video.playbackRate = 1.5;
+    video.loop = false;
+})
+
+video.onended = function(e) {
+    if (open == false) {
+    video.setAttribute("src", clips[10]);
+    video.load();
+    video.playbackRate = 1.3;
+    video.loop = true;
+} else {
+    video.setAttribute("src", clips[8]);
+    video.load();
+    video.playbackRate = 1.7;
+    video.loop = true;
+}
+    };
+
+</script>
+
+
+
+</body>
+</html>
