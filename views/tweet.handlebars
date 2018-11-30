@@ -57,7 +57,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-        object-fit: cover;
+        /* object-fit: cover; */
     width: 100vw;
     height: 100vh;
     opacity: 1;
@@ -316,13 +316,13 @@ input[type="button"]{
 
   <div class="dynamic">
   <video autoplay muted loop id="myVideo">
-    <source src="1door-closed-A.mp4" type="video/mp4">
+    <source src="1door-closed-A.mp4" type="video/mp4" playsinline>
   </video>
   </div>
 
   <div class="static">
   <video autoplay muted loop id="myVideo-background">
-    <source src="1door-closed-A.mp4" type="video/mp4">
+    <source src="1door-closed-A.mp4" type="video/mp4" playsinline>
   </video>
   </div>
 </div>
