@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+
+var Twitter = require('twitter');
+var config = require('./config.js');
+var T = new Twitter(config);
 // const tweet = require('./tweet.js');
 
 var exphbs = require('express-handlebars');
@@ -26,6 +30,13 @@ function fileToArray(file){
     var words = text.split(" ")
     return words
 }
+
+function writetoFile(data){
+fs.writeFile('tweets.txt', data, function(err, data){
+    if (err) console.log(err);
+    console.log("Successfully Written to File.");
+});
+};
 
  function arrayToString(array){
      var string = ""
@@ -143,10 +154,14 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
     return [tweet, even]
 }}
 
-function run(){
+function run(authorNum){
 var n = 6;
-var file = chooseRandomFile();
-var fileArray = fileToArray(file);
+// var file = chooseRandomFile();
+
+
+var files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md" , "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
+
+var fileArray = fileToArray(files[authorNum]);
 var word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
 var tweet = word
 
@@ -159,7 +174,7 @@ while (tweet.length < 110) {
     var v = Math.floor(Math.random() * Math.floor(keysvTK.length)); // random index out of the array of keys of frequencies
     word = vTK[keysvTK[v]][Math.floor(Math.random() * Math.floor(vTK[keysvTK[v]].length - 1))] // random index out of the array of words for frequency 'v'
     tweet = tweet + " " + word // 'word' NOT WEIGHTED -- HOW TO IMPLEMENT??
-}
+};
 
 
 
@@ -180,7 +195,7 @@ while (tweet.length < 110) {
 
 //
 
-var author = file.slice(0, -3)
+var author = files[authorNum].slice(0, -3);
 
 var thing = check(tweet)
 var odd = thing[1]
@@ -194,7 +209,12 @@ if (odd){
 
  tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
 
-return tweet.toString()}
+return tweet.toString()
+}
+
+
+//generating an array of tweets
+
 
 // var titleElement = document.getElementById('title');
 // var tweet = run()
@@ -206,13 +226,32 @@ return tweet.toString()}
   // console.log('App listening on port 7000!')
 // })
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 10000;
 // var server = app.listen(process.env.PORT || 8000, function () {
   // var port = server.address().port;
   // console.log("Express is working on port " + port);
 // });
 
-app.get('/', (req, res) => {
-  res.render('tweet', { msg: run() });
-})
+
+ app.get('/', (req, res) => {
+     res.render('tweet', { msg1: run(0), msg2: run(1), msg3: run(2), msg4: run(3), msg5: run(4), msg6: run(5), msg7: run(6)});
+ })
+
+
+// app.get('/generate', (req, res) => {
+  // res.render('gen', { msg: run() });
+// })
+
+var status = "Hello"
+
+// T.post('/tweet', status, function(err, response){
+    // if(err){
+        // console.log(err);
+      // } else {
+        // console.log(screen_name, ': **FOLLOWED**');
+      // }
+// });
+
 app.listen(port);
+
+// Hope you locked the fisherman, ‘how dreadful storm was so he put him so she jumped for a while, and the king, that. -The Brothers Grimm

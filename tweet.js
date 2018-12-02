@@ -1,6 +1,3 @@
-
-
-
 var fs = require("fs");
 
 function chooseRandomFile(){
@@ -13,6 +10,13 @@ function fileToArray(file){
     var words = text.split(" ")
     return words
 }
+
+function writetoFile(data){
+fs.writeFile('tweets.txt', data, function(err, data){
+    if (err) console.log(err);
+    console.log("Successfully Written to File.");
+});
+};
 
  function arrayToString(array){
      var string = ""
@@ -132,8 +136,32 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
 
 function run(){
 var n = 6;
-var file = chooseRandomFile();
-var fileArray = fileToArray(file);
+// var file = chooseRandomFile();
+
+var twit = [
+    ["Grimm.md",],
+    ["Poe.md",],
+    ["Wilde.md",],
+    ["Woolf.md",],
+    ["Carroll.md",],
+    ["Shakespeare.md",],
+    ["Lovecraft.md",],
+    ["test.md"]
+];
+
+
+
+var total = 70; //multiple of 7
+var i = 0;
+console.log(twit[i].length < (total/7))
+var amount = 0;
+
+while(i < 7) {
+    if (amount == (total/7)){
+        i = i + 1;
+    }
+
+var fileArray = fileToArray(twit[i][0]);
 var word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
 var tweet = word
 
@@ -146,7 +174,7 @@ while (tweet.length < 110) {
     var v = Math.floor(Math.random() * Math.floor(keysvTK.length)); // random index out of the array of keys of frequencies
     word = vTK[keysvTK[v]][Math.floor(Math.random() * Math.floor(vTK[keysvTK[v]].length - 1))] // random index out of the array of words for frequency 'v'
     tweet = tweet + " " + word // 'word' NOT WEIGHTED -- HOW TO IMPLEMENT??
-}
+};
 
 
 
@@ -167,7 +195,7 @@ while (tweet.length < 110) {
 
 //
 
-var author = file.slice(0, -3)
+var author = twit[i][0].slice(0, -3);
 
 var thing = check(tweet)
 var odd = thing[1]
@@ -181,14 +209,15 @@ if (odd){
 
  tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
 
-return tweet.toString()}
+ tweet = "\n\n" + tweet + "\n\n"
 
-// var titleElement = document.getElementById('title');
-var tweet = run()
+twit[i].push(tweet.toString())
+amount = twit[i].length
+console.log(i)
+};
 
-// titleElement.innerHTML = tweet;
-console.log(tweet)
-// console.log(tweet.length)
+return twit}
 
 
-module.exports = tweet;
+//generating an array of tweets
+tweet = run()

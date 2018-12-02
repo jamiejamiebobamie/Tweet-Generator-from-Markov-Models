@@ -12,6 +12,479 @@
 
     <style>
 
+    .popuptext{
+        font-family: monospace;
+        opacity: 0;
+        color: #ff9a00;
+    }
+
+    /* Popup container */
+    .popup1 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 500px;
+        left:280px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup1 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        /* background-color: #555; */
+        /* background-color: #ff9a00; */
+
+        opacity: 0.9;
+        /* color: black; */
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        /* z-index: 1; */
+        bottom: 125%;
+        /* left: 50%; */
+        /* margin-left: -80px; */
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+
+
+    /* Popup arrow */
+    .popup1 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup1 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: .9;}
+            z-index: 4
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:.9 ;}
+            z-index: 4
+        }
+
+
+    .popup2 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:455px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup2 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup2 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup2 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    .popup3 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 540px;
+        left:585px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup3 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup3 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup3 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    .popup4 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:680px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup4 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup4 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup4 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    .popup5 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:805px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup5 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup5 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup5 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    .popup6 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 470px;
+        left:905px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup6 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup6 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup6 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    .popup7 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 500px;
+        left:1080px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup7 .popuptext {
+        /* visibility: hidden; */
+        visibility: show;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup7 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup7 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+    /* The actual popup (appears on top) */
+    /* .popup1 .popuptext { */
+        /* visibility: hidden; */
+        /* width: 160px; */
+
+/*  */
+        /* opacity: 0.9; */
+
+        /* text-align: center; */
+        /* border-radius: 6px; */
+        /* padding: 9px 0; */
+        /* position: absolute; */
+
+        /* bottom: 125%; */
+
+        /* z-index: 4 */
+        /* font-family: monospace; */
+        /* font-size: 1vw; */
+    /* } */
+/*  */
+/*  */
+
+    /* .popup1 .popuptext::after { */
+        /* content: ""; */
+        /* position: absolute; */
+        /* top: 100%; */
+        /* left: 50%; */
+        /* margin-left: -5px; */
+        /* border-width: 5px; */
+        /* border-style: solid; */
+        /* border-color: #555 transparent transparent transparent; */
+        /* z-index: 4 */
+    /* } */
+/*  */
+
+    /* .popup1 .show { */
+        /* visibility: visible; */
+        /* -webkit-animation: fadeIn 1s; */
+        /* animation: fadeIn 1s */
+        /* z-index: 4 */
+    /* } */
+/*  */
+
+    /* @-webkit-keyframes fadeIn { */
+        /* from {opacity: 0;} */
+        /* to {opacity: .9;} */
+        /* z-index: 4 */
+    /* } */
+/*  */
+    /* @keyframes fadeIn { */
+        /* from {opacity: 0;} */
+        /* to {opacity:.9 ;} */
+        /* z-index: 4 */
+    /* } */
+
 
     /* .video-container {
       position: absolute;
@@ -37,7 +510,66 @@
       transform: translate(-50%,-50%);
     } */
 
+.nabar{
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 7;
+    top: 100px;
+    left:100px;
+}
 
+.tweet_button{
+    z-index:5;
+    position: absolute;
+    opacity: 1;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+    left:0px;
+    visibility: hidden;
+}
+
+.tweet_image{
+    z-index:4;
+    position: absolute;
+    opacity:1;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+    opacity: .9;
+    visibility: hidden;
+}
+
+.jar_button{
+    /* background: orange; */
+    z-index:3;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .7;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 194px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.jar_image{
+    /* background: orange; */
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .9;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 160px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
     .test{
         z-index:2;
         position: absolute;
@@ -67,41 +599,19 @@
         z-index: 1
     }
 
-    .jar_button{
-        z-index:2;
-        position: absolute;
-        opacity: 0;
-        height: 100px;
-        width: 50%;
-        float:left;
-        bottom: 15px;
-        left:13%;
-        margin-left:-150px;
-    }
 
-    .tweet_button{
-        z-index:2;
-        position: absolute;
-        opacity: 0;
-        height: 100px;
-        width: 50%;
-        float:left;
-        bottom: 15px;
-        right:13%;
-        margin-right:-50px;
-    }
 
-     .buttons{
-        font-size:0;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        font-size: 30px;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        left:23.1%;
-    }
+     /* .buttons{ */
+        /* font-size:0; */
+        /* z-index:2; */
+        /* animation: pulse 5s infinite; */
+        /* position: absolute; */
+        /* opacity: 0; */
+        /* font-size: 30px; */
+        /* -webkit-transition-duration: 0.4s; */
+        /* transition-duration: 0.4s; */
+        /* left:23.1%; */
+    /* } */
 
 .Grimm{
     background: orange;
@@ -217,70 +727,6 @@
     border-radius: 10px;
 }
 
-.tweet_button{
-    /* background: orange; */
-    z-index:3;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    bottom: 175px;
-    left:94.2%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
-
-.tweet_image{
-    /* background: orange; */
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: .9;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    bottom: 175.5px;
-    left:95%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
-
-.jar_button{
-    /* background: orange; */
-    z-index:3;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    bottom: 194px;
-    left:85%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
-
-.jar_image{
-    /* background: orange; */
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: .9;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    bottom: 160px;
-    left:85%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
-
 input[type="button"]{
  -moz-appearance: none;
  -webkit-appearance: none;
@@ -316,22 +762,26 @@ input[type="button"]{
 
  <body bgcolor="#E6E6FA">
 
+
+     <body>
      <div class="video-container">
 
   <div class="dynamic">
   <video autoplay muted loop id="myVideo">
-    <source src="1door-closed-A.mp4" playsinline>
+    <source src="1door-closed-A.mp4">
   </video>
   </div>
 
   <div class="static">
   <video autoplay muted loop id="myVideo-background">
-    <source src="1door-closed-A.mp4" playsinline>
+    <source src="1door-closed-A.mp4">
   </video>
   </div>
 </div>
 
+<div class="nabar">
 
+</div>
 <div class="jar_button">
     <input id="jar" style="width:130px;height:130px;border-radius: 12px;" type="button" value="jar" >
 </div>
@@ -341,19 +791,27 @@ input[type="button"]{
 </div>
 
 <div class="tweet_button">
-    <input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" >
+<input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" >
+</div>
+<div class="tweet_image">
+<img src="tweet-icon-symbol2 copy.png" width="80" height="80"/>
+</div>
 </div>
 
-<div class="tweet_image">
-    <img src="tweet-icon-symbol2 copy.png" width="80" height="80"/>
-</div>
+<!-- <div class="tweet_button"> -->
+    <!-- <input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" > -->
+<!-- </div> -->
+<!--  -->
+<!-- <div class="tweet_image"> -->
+    <!-- <img src="tweet-icon-symbol2 copy.png" width="80" height="80"/> -->
+<!-- </div> -->
 
 <div class="Grimm">
-<input id="Grimm" style="width:205px;height:185px;border-radius: 12px;" type="button" value="The Brothers Grimm" >
+<input id="Grimm" style="width:205px;height:185px;border-radius: 12px;" type="button" onclick="myFunction()" value="The Brothers Grimm" >
 </div>
 
 <div class="Poe">
-<input id="Poe" style="width:115px;height:130px;border-radius: 12px;" type="button" value="Edgar Allan Poe" >
+<input id="Poe" style="width:115px;height:130px;border-radius: 12px;" type="button" onclick="myFunction()" value="Edgar Allan Poe" >
 </div>
 
 <div class="Wilde">
@@ -380,153 +838,31 @@ input[type="button"]{
 <input id="Keep" type="button" value="Keep" >
 </div>
 
-<!-- <h1 id="title">helo hllo</h1> -->
-<h1 id="title">{{msg}}</h1>
+<!-- <h1 id="title">{{msg}}</h1> -->
 
-<div class="test">
-     <input id="butt" type="button" value="Try it">
-</div>
+<div class="popup1" onclick="myFunction()">
+  <span class="popuptext" id="myPopup">{{msg1}}</span></div>
 
-     <script>
-        // fetch('path/to/file').then((res) => {
-            // return res.text()
-        // }).then((textData) => {
-            // console.log(textData)
-            // run()
-        // }).catch((err) => {
-            // console.log(err.message)
-        // })
+  <div class="popup2" onclick="myFunction2()">
+    <span class="popuptext" id="myPopup2">{{msg2}}</span></div>
 
-      const button_11 = document.getElementById("butt");
-      var titleElement = document.getElementById('title');
-      // var remote = require("remote");
-      // var fs = remote.require("fs");
-      var fs = require("fs");
+    <div class="popup3" onclick="myFunction3()">
+      <span class="popuptext" id="myPopup3">{{msg3}}</span></div>
 
-    {
-      function chooseRandomFile(){
-          var files = ["Wilde.md", "Shakespeare.md", "Grimm.md", "Carroll.md", "Lovecraft.md", "Woolf.md", "Poe.md"];
-          return files[Math.floor(Math.random() * Math.floor(files.length))];
-      }
+      <div class="popup4" onclick="myFunction4()">
+        <span class="popuptext" id="myPopup4">{{msg4}}</span></div>
 
-      function fileToArray(file){
-          var text = fs.readFileSync(file).toString('utf-8');
-          var words = text.split(" ");
-          return words;
-      }
+        <div class="popup5" onclick="myFunction5()">
+          <span class="popuptext" id="myPopup5">{{msg5}}</span></div>
 
-       function arrayToString(array){
-           var string = "";
-           var i;
-           for (i = 0; i < array.length; i++) {
-               string += array[i].toString('utf-8') + " "};
-           return string;
-      }
+          <div class="popup6" onclick="myFunction6()">
+            <span class="popuptext" id="myPopup6">{{msg6}}</span></div>
 
-      function wordBeforeAfter(array, word, n) {
-         var instances = [];
-         for (var i = 0; i < array.length; i++) {
-             if (array[i] == word){
-                 var x = i - 1;
-                 var beforeWords = [];
-                 while (x > i - n) {
-                  beforeWords.push(array[x]);
-                      x -= 1;
-                      }
-                      var myInstance = [word, beforeWords, array[i+1]];
-                      instances.push(myInstance);
-                      }
-                   }
-                   return instances;
-                 }
-
-      function nextWords(instances) {
-          var lenInt = 0;
-          var next = {};
-          for (var i = 0; i < instances.length; i++) {
-              if (instances[i][2] in next) {
-                  next[instances[i][2]] += 1;
-              } else {
-                  next[instances[i][2]] = 1;
-              }
-              if (lenInt < next[instances[i][2]]){
-                  lenInt = next[instances[i][2]];
-              };
-          }
-          return ([next, lenInt]);
-      };
-
-      function pickRand(nexts){
-          var rand = Math.floor(Math.random() * Math.floor(nexts[1]));
-          if (rand != 0){
-              return rand;
-          } else {
-              return 1;
-          }
-      }
-
-      function valuestoKeys(nexts){
-          var max = nexts[1];
-          var newDict = {};
-          var arrKeys = Object.keys(nexts[0]);
-          var arrValues = Object.values(nexts[0]);
-          for (var i = 0; i < arrValues.length; i++){
-              if (arrValues[i] in newDict) {
-              newDict[arrValues[i]].push(arrKeys[i]);
-          } else {
-              newDict[arrValues[i]] = [arrKeys[i]];
-          }
-          }
-          return newDict;
-      }
-
-     function run(){
-      var n = 6;
-      var file = chooseRandomFile();
-      var fileArray = fileToArray(file);
-      var word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))];
-      var tweet = word;
-
-      while (tweet.length < 110) {
-          var wBA = wordBeforeAfter(fileArray, word, n); // file to array of words
-          var nexts = nextWords(wBA); // next words
-          var max = nexts[1]; // max frequency (the frequency of the most likely next word)
-          var vTK = valuestoKeys(nexts); // dictionary of frequencies and arrays of words
-          var keysvTK = Object.keys(vTK); // array of keys of frequencies
-          var v = Math.floor(Math.random() * Math.floor(keysvTK.length)); // random index out of the array of keys of frequencies
-          word = vTK[keysvTK[v]][Math.floor(Math.random() * Math.floor(vTK[keysvTK[v]].length - 1))]; // random index out of the array of words for frequency 'v'
-          tweet = tweet + " " + word; // 'word' NOT WEIGHTED -- HOW TO IMPLEMENT??
-      }
-
-      var punc = [".", "!", "?", ";", ",", "\'", "\""];
-
-      tweet = tweet + "." + " -" + file;
-      tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
-
-      return tweet};
-  }
-
-     button_11.addEventListener('click', function(e){
-     var tweet = run();
-     titleElement.innerHTML = tweet;
- })
-
-     </script>
+            <div class="popup7" onclick="myFunction7()">
+              <span class="popuptext" id="myPopup7">{{msg7}}</span></div>
 
 
-<!-- <div class="dynamic">
-<video autoplay muted loop id="myVideo">
-  <source src="../finals/1door-closed-A.mp4" type="video/mp4">
-</video>
-</div>
 
-<div class="static">
-<video autoplay muted loop id="myVideo-background">
-  <source src="../finals/1door-closed-A.mp4" type="video/mp4">
-</video>
-</div> -->
-
-<!-- <script src="../tweet.js"></script> -->
 
 <script>
 
@@ -554,6 +890,13 @@ var clip = "5door-closed-C.mp4";
 const clips = ["jar1-final.mp4", "jar2-final-C.mp4", "jar3-final-D.mp4", "jar4-final-F.mp4", "jar5-final-F.mp4", "jar6-final-B.mp4", "jar7-final-B.mp4", "2door-opening.mp4", "3door open.mp4", "4door-closing.mp4", "1door-closed-A.mp4"]
 const shocks = ["jar1-final.mp4", "jar2-final-C.mp4", "jar3-final-D.mp4", "jar4-final-F.mp4", "jar5-final-F.mp4", "jar6-final-B.mp4", "jar7-final-B.mp4"]
 
+//
+
+
+
+
+//
+
 button_1.addEventListener('click', function(e){
     //num = Math.floor(Math.random() * Math.floor(clips.length))
 //    titleElement.innerHTML = "grimm";
@@ -561,8 +904,9 @@ button_1.addEventListener('click', function(e){
     video.load();
     video.playbackRate = 1.2;
     video.loop = false;
-    // tweet = app.run();
-    titleElement.innerHTML = tweet;
+    // titleElement.innerHTML = tweet;
+    // console.log(tweet)
+    // setTimeout("myFunction()",200000);
 })
 
 button_2.addEventListener('click', function(e){
@@ -572,7 +916,8 @@ button_2.addEventListener('click', function(e){
     video.load();
     video.playbackRate = 1.7;
     video.loop = false;
-    titleElement.innerHTML = 'pee';
+    // titleElement.innerHTML = 'pee';
+    myFunction()
 })
 
 button_3.addEventListener('click', function(e){
@@ -616,12 +961,12 @@ button_7.addEventListener('click', function(e){
 })
 
 button_8.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
     video.setAttribute("src", clips[7]);
     video.load();
     video.playbackRate = 1;
     video.loop = false;
     open = true;
+    location.href='https://twitter.com/writers_dead';
 })
 
 button_9.addEventListener('click', function(e){
@@ -631,6 +976,7 @@ button_9.addEventListener('click', function(e){
     video.playbackRate = 1;
     video.loop = false;
     open = false;
+    myFunction()
 })
 
 button_10.addEventListener('click', function(e){
@@ -639,25 +985,47 @@ button_10.addEventListener('click', function(e){
     video.loop = false;
     tweet = run()
     titleElement.innerHTML = tweet;
+    myFunction()
 })
 
 video.onended = function(e) {
-    if (open == false) {
+    // if (open == false) {
     video.setAttribute("src", clips[10]);
     video.load();
     video.playbackRate = 1.3;
     video.loop = true;
-} else {
-    video.setAttribute("src", clips[8]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = true;
-}
-    };
+// } else {
+    // video.setAttribute("src", clips[8]);
+    // video.load();
+    // video.playbackRate = 1.7;
+    // video.loop = true;
+// }
+};
 
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    // tweet_button.classList.toggle("show");
+    // tweet_image.classList.toggle("show");
+};
+
+function myFunction2() {
+    var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");
+};
+
+// function myFunction3() {
+    // var popup = document.getElementById("myPopup3");
+    // popup.classList.toggle("show");
+
+// };
+// function myFunction4() {
+    // var popup = document.getElementById("myPopup4");
+    // popup.classList.toggle("show");
+// };
 </script>
-
-
 
 </body>
 </html>
