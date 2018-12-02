@@ -234,7 +234,15 @@ const port = process.env.PORT || 10000;
 
 
  app.get('/', (req, res) => {
-     res.render('tweet', { msg1: run(0), msg2: run(1), msg3: run(2), msg4: run(3), msg5: run(4), msg6: run(5), msg7: run(6)});
+     var tGrimm = run(0);
+     var tPoe = run(1);
+     var tWilde = run(2);
+     var tWoolf = run(3);
+     var tCarroll = run(4);
+     var tShakespeare = run(5);
+     var tLovecraft = run(6);
+     res.render('tweet', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
+
  })
 
 
