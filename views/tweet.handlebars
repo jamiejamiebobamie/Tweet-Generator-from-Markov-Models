@@ -68,8 +68,10 @@
     /* Toggle this class when clicking on the popup container (hide and show the popup) */
     .popup1 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        animation-delay: 2s;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s;
+        /* animation-timing-function: cubic-bezier(x2); */
         z-index: 4
     }
 
@@ -127,8 +129,8 @@
 
     .popup2 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -183,8 +185,8 @@
 
     .popup3 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -239,8 +241,8 @@
 
     .popup4 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -295,8 +297,8 @@
 
     .popup5 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -351,8 +353,8 @@
 
     .popup6 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -374,8 +376,8 @@
         display: inline-block;
         cursor: pointer;
         z-index: 4;
-        top: 500px;
-        left:1080px;
+        top: 570px;
+        left:1073px;
     }
 
     /* The actual popup (appears on top) */
@@ -407,8 +409,8 @@
 
     .popup7 .show {
         visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
         z-index: 4
     }
 
@@ -774,9 +776,9 @@ input[type="button"]{
   </div>
 </div>
 
+
 <div class="nabar">
 
-</div>
 <div class="jar_button">
     <input id="jar" style="width:130px;height:130px;border-radius: 12px;" type="button" value="jar" >
 </div>
@@ -788,45 +790,41 @@ input[type="button"]{
 <div class="tweet_button">
 <input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" >
 </div>
+
 <div class="tweet_image">
 <img src="tweet-icon-symbol2 copy.png" width="80" height="80"/>
 </div>
+
 </div>
 
-<!-- <div class="tweet_button"> -->
-    <!-- <input id="Tweet" style="width:105px;height:105px;border-radius: 12px;" type="button" value="Tweet" > -->
-<!-- </div> -->
-<!--  -->
-<!-- <div class="tweet_image"> -->
-    <!-- <img src="tweet-icon-symbol2 copy.png" width="80" height="80"/> -->
-<!-- </div> -->
+
 
 <div class="Grimm">
-<input id="Grimm" style="width:205px;height:185px;border-radius: 12px;" type="button" onclick="myFunction1()" value="The Brothers Grimm" >
+<input id="Grimm" style="width:205px;height:185px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction1, 2000)" value="The Brothers Grimm" >
 </div>
 
 <div class="Poe">
-<input id="Poe" style="width:115px;height:130px;border-radius: 12px;" type="button" onclick="myFunction2()" value="Edgar Allan Poe" >
+<input id="Poe" style="width:115px;height:130px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction2, 2000)" value="Edgar Allan Poe" >
 </div>
 
 <div class="Wilde">
-<input id="Wilde" style="width:80px;height:160px;border-radius: 12px;" type="button" onclick="myFunction3()" value="Oscar Wilde" >
+<input id="Wilde" style="width:80px;height:160px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction3, 2000)" value="Oscar Wilde" >
 </div>
 
 <div class="Woolf">
-<input id="Woolf" style="width:90px;height:100px;border-radius: 12px;" type="button" onclick="myFunction4()" value="Virginia Woolf" >
+<input id="Woolf" style="width:90px;height:100px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction4, 2000)" value="Virginia Woolf" >
 </div>
 
 <div class="Carroll">
-<input id="Carroll" style="width:90px;height:100px;border-radius: 12px;" type="button" onclick="myFunction5()" value="Lewis Carroll" >
+<input id="Carroll" style="width:90px;height:100px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction5, 2000)" value="Lewis Carroll" >
 </div>
 
 <div class="Shakespeare">
-<input id="Shakespeare" style="width:80px;height:200px;border-radius: 12px;" type="button" onclick="myFunction6()" value="William Shakespeare" >
+<input id="Shakespeare" style="width:80px;height:200px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction6, 2000)" value="William Shakespeare" >
 </div>
 
 <div class="Lovecraft">
-<input id="Lovecraft" style="width:200px;height:120px;border-radius: 12px;" type="button" onclick="myFunction7()" value="HP Lovecraft" >
+<input id="Lovecraft" style="width:200px;height:120px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction7, 2000)" value="HP Lovecraft" >
 </div>
 
 <div class="buttons">
@@ -836,7 +834,7 @@ input[type="button"]{
 <!-- <h1 id="title">{{grimmly}}</h1> -->
 
 
-<div class="popup1" onclick="myFunction1()">
+<div class="popup1" onclick="setTimeout(myFunction1, 2000)">
   <span class="popuptext" id="myPopup1">{{msg1}}</span></div>
 
   <div class="popup2" onclick="myFunction2()">
@@ -888,7 +886,21 @@ const shocks = ["jar1-final.mp4", "jar2-final-C.mp4", "jar3-final-D.mp4", "jar4-
 
 //
 
+var grimmBool = false;
+var poeBool = false;
+var wildeBool = false;
+var woolfBool = false;
+var carrollBool = false;
+var shakespeareBool = false;
+var lovecraftBool = false;
 
+var grimmPop = document.getElementById("myPopup1")
+var poePop = document.getElementById("myPopup2")
+var wildePop = document.getElementById("myPopup3")
+var woolfPop = document.getElementById("myPopup4")
+var carrollPop = document.getElementById("myPopup5")
+var shakespearePop = document.getElementById("myPopup6")
+var lovecraftPop = document.getElementById("myPopup7")
 
 
 //
@@ -969,16 +981,16 @@ button_9.addEventListener('click', function(e){
     video.playbackRate = 1;
     video.loop = false;
     open = false;
-    myFunction()
+
 })
 
 button_10.addEventListener('click', function(e){
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.playbackRate = 1.5;
     video.loop = false;
-    tweet = run()
+
     titleElement.innerHTML = tweet;
-    myFunction()
+
 })
 
 video.onended = function(e) {
@@ -995,21 +1007,7 @@ video.onended = function(e) {
 // }
 };
 
-var grimmBool = true;
-var poeBool = true;
-var wildeBool = true;
-var woolfBool = true;
-var carrollBool = true;
-var shakespeareBool = true;
-var lovecraftBool = true;
 
-var grimmPop = document.getElementById("myPopup1")
-var poePop = document.getElementById("myPopup2")
-var wildePop = document.getElementById("myPopup3")
-var woolfPop = document.getElementById("myPopup4")
-var carrollPop = document.getElementById("myPopup5")
-var shakespearePop = document.getElementById("myPopup6")
-var lovecraftPop = document.getElementById("myPopup7")
 
 
 // When the user clicks on <div>, open the popup
@@ -1017,15 +1015,8 @@ function myFunction1() {
     if (grimmBool == false) {
     let popup = document.getElementById("myPopup1");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    wildeBool = false;
-    woolfBool = false;
-    carrollBool = false;
-    shakespeareBool = false;
-    lovecraftBool = false;
     grimmBool = true;
-    showHide();
+    showHide("grimm");
 }
 };
 
@@ -1033,80 +1024,54 @@ function myFunction2() {
     if (poeBool == false) {
     let popup = document.getElementById("myPopup2");
     popup.classList.toggle("show");
-    grimmBool = false;
-    wildeBool = false;
-    woolfBool = false;
-    carrollBool = false;
-    shakespeareBool = false;
-    lovecraftBool = false;
     poeBool = true;
-    showHide();
+    showHide("poe");
 }
 };
 
 function myFunction3() {
+    if (wildeBool == false) {
     let popup = document.getElementById("myPopup3");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    woolfBool = false;
-    carrollBool = false;
-    shakespeareBool = false;
-    lovecraftBool = false;
     wildeBool = true;
-    showHide();
+    showHide("wilde");
+}
 };
 
 function myFunction4() {
+    if (woolfBool == false) {
     let popup = document.getElementById("myPopup4");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    wildeBool = false;
-    carrollBool = false;
-    shakespeareBool = false;
-    lovecraftBool = false;
     woolfBool = true;
-    showHide();
+    showHide("woolf");
+}
 };
 
 function myFunction5() {
+    if (carrollBool == false) {
     let popup = document.getElementById("myPopup5");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    wildeBool = false;
-    woolfBool = false;
-    shakespeareBool = false;
-    lovecraftBool = false;
     carrollBool = true;
-    showHide();
+    showHide("carroll");
+}
 };
 
 function myFunction6() {
+    if (shakespeareBool == false) {
     let popup = document.getElementById("myPopup6");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    wildeBool = false;
-    woolfBool = false;
-    carrollBool = false;
-    lovecraftBool = false;
     shakespeareBool = true;
-    showHide();
+    showHide("shakespeare");
+}
 };
 
 function myFunction7() {
+    if (lovecraftBool == false) {
     let popup = document.getElementById("myPopup7");
     popup.classList.toggle("show");
-    grimmBool = false;
-    poeBool = false;
-    wildeBool = false;
-    woolfBool = false;
-    carrollBool = false;
-    shakespeareBool = false;
     lovecraftBool = true;
-    showHide();
+    showHide("lovecraft");
+}
 };
 
 // function myFunction3() {
@@ -1119,35 +1084,45 @@ function myFunction7() {
     // popup.classList.toggle("show");
 // };
 
-function showHide(){
-if (grimmBool == false){
+function showHide(on) {
+if ("grimm" != on && grimmBool == true){
     grimmPop.classList.toggle("show");
+    grimmBool = false;
 }
 
-if (poeBool == false){
+if ("poe" != on && poeBool == true){
     poePop.classList.toggle("show");
+    poeBool = false;
 }
 
-if (wildeBool == false){
+if ("wilde" != on && wildeBool == true){
     wildePop.classList.toggle("show");
+    wildeBool = false;
 }
 
-if (woolfBool == false){
+if ("woolf" != on && woolfBool == true){
     woolfPop.classList.toggle("show");
+    woolfBool = false;
 }
 
-if (carrollBool == false){
+if ("carroll" != on && carrollBool == true){
     carrollPop.classList.toggle("show");
+    carrollBool = false;
 }
 
-if (shakespeareBool == false){
+if ("shakespeare" != on && shakespeareBool == true){
     shakespearePop.classList.toggle("show");
+    shakespeareBool = false;
 }
 
-if (lovecraftBool == false){
+if ("lovecraft" != on && lovecraftBool == true){
     lovecraftPop.classList.toggle("show");
+    lovecraftBool = false;
 }
-};
+
+console.log(grimmBool, poeBool, wildeBool, woolfBool, carrollBool, shakespeareBool, lovecraftBool);
+console.log(on)
+}
 
 </script>
 
