@@ -834,25 +834,25 @@ input[type="button"]{
 <!-- <h1 id="title">{{grimmly}}</h1> -->
 
 
-<div class="popup1" onclick="goHere()">
+<div class="popup1" onclick="goHere(0)">
   <span class="popuptext" id="myPopup1">{{msg1}}</span></div>
 
-  <div class="popup2" onclick="goHere()">
+  <div class="popup2" onclick="goHere(1)">
     <span class="popuptext" id="myPopup2">{{msg2}}</span></div>
 
-    <div class="popup3" onclick="goHere()">
+    <div class="popup3" onclick="goHere(2)">
       <span class="popuptext" id="myPopup3">{{msg3}}</span></div>
 
-      <div class="popup4" onclick="goHere()">
+      <div class="popup4" onclick="goHere(3)">
         <span class="popuptext" id="myPopup4">{{msg4}}</span></div>
 
-        <div class="popup5" onclick="goHere()">
+        <div class="popup5" onclick="goHere(4)">
           <span class="popuptext" id="myPopup5">{{msg5}}</span></div>
 
-          <div class="popup6" onclick="goHere()">
+          <div class="popup6" onclick="goHere(5)">
             <span class="popuptext" id="myPopup6">{{msg6}}</span></div>
 
-            <div class="popup7" onclick="goHere()">
+            <div class="popup7" onclick="goHere(6)">
               <span class="popuptext" id="myPopup7">{{msg7}}</span></div>
 
 
@@ -1124,12 +1124,16 @@ console.log(grimmBool, poeBool, wildeBool, woolfBool, carrollBool, shakespeareBo
 console.log(on)
 }
 
-function goHere(){
+function goHere(num){
+        num = num;
+        console.log(num)
         // location.href='/tweet';
         location.href='https://twitter.com/writers_dead';
 }
 
 </script>
+<script src="./../app.js" type="text/javascript">
 
+</script>
 </body>
 </html>

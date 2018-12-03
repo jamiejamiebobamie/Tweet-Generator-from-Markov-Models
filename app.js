@@ -232,17 +232,30 @@ const port = process.env.PORT || 10000;
   // console.log("Express is working on port " + port);
 // });
 
+var tGrimm;
+var tPoe;
+var tWilde;
+var tWoolf;
+var tCarroll;
+var tShakespeare;
+var tLovecraft;
+var status;
 
  app.get('/', (req, res) => {
-     var tGrimm = run(0);
-     var tPoe = run(1);
-     var tWilde = run(2);
-     var tWoolf = run(3);
-     var tCarroll = run(4);
-     var tShakespeare = run(5);
-     var tLovecraft = run(6);
+     var num;
+     tGrimm = run(0);
+     tPoe = run(1);
+     tWilde = run(2);
+     tWoolf = run(3);
+     tCarroll = run(4);
+     tShakespeare = run(5);
+     tLovecraft = run(6);
      res.render('tweet', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
- })
+
+     status = [tGrimm, tPoe, tWilde, tWoolf, tCarroll, tShakespeare, tLovecraft];
+
+
+ });
 
 
 // app.get('/generate', (req, res) => {
@@ -278,10 +291,9 @@ const port = process.env.PORT || 10000;
 *		https://dev.twitter.com/docs/api/1.1
 */
 
+
+
 var OAuth = require('oauth');
-
-
-
 
 var twitter_application_consumer_key = 'Ze8QiQyYoAah0dkgCaWqvrFpL';  // API Key
 var twitter_application_secret = '1g5sA5MQt9LXHaFcItiggDAcagk1KlaGXBvRS98umagSMv0m3d';  // API Secret
@@ -298,7 +310,9 @@ var oauth = new OAuth.OAuth(
 	'HMAC-SHA1'
 );
 
-var status = run(6);  // This is the tweet (ie status)
+var status = run(Math.floor(Math.random() * Math.floor(6)));  // This is the tweet (ie status)
+
+console.log(status)
 
 var postBody = {
 	'status': status
