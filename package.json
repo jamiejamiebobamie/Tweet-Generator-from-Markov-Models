@@ -10,6 +10,7 @@
     "express-handlebars": "^3.0.0",
     "file-system": "^2.2.2",
     "mongoose": "^5.3.14",
+    "oauth": "^0.9.15",
     "save": "^2.3.2",
     "twitter": "^1.7.1",
     "yarn": "^1.12.3"

@@ -834,25 +834,25 @@ input[type="button"]{
 <!-- <h1 id="title">{{grimmly}}</h1> -->
 
 
-<div class="popup1" onclick="setTimeout(myFunction1, 2000)">
+<div class="popup1" onclick="goHere()">
   <span class="popuptext" id="myPopup1">{{msg1}}</span></div>
 
-  <div class="popup2" onclick="myFunction2()">
+  <div class="popup2" onclick="goHere()">
     <span class="popuptext" id="myPopup2">{{msg2}}</span></div>
 
-    <div class="popup3" onclick="myFunction3()">
+    <div class="popup3" onclick="goHere()">
       <span class="popuptext" id="myPopup3">{{msg3}}</span></div>
 
-      <div class="popup4" onclick="myFunction4()">
+      <div class="popup4" onclick="goHere()">
         <span class="popuptext" id="myPopup4">{{msg4}}</span></div>
 
-        <div class="popup5" onclick="myFunction5()">
+        <div class="popup5" onclick="goHere()">
           <span class="popuptext" id="myPopup5">{{msg5}}</span></div>
 
-          <div class="popup6" onclick="myFunction6()">
+          <div class="popup6" onclick="goHere()">
             <span class="popuptext" id="myPopup6">{{msg6}}</span></div>
 
-            <div class="popup7" onclick="myFunction7()">
+            <div class="popup7" onclick="goHere()">
               <span class="popuptext" id="myPopup7">{{msg7}}</span></div>
 
 
@@ -1122,6 +1122,11 @@ if ("lovecraft" != on && lovecraftBool == true){
 
 console.log(grimmBool, poeBool, wildeBool, woolfBool, carrollBool, shakespeareBool, lovecraftBool);
 console.log(on)
+}
+
+function goHere(){
+        // location.href='/tweet';
+        location.href='https://twitter.com/writers_dead';
 }
 
 </script>
