@@ -250,7 +250,8 @@ const port = process.env.PORT || 10000;
   // res.render('gen', { msg: run() });
 // })
 
-var status = "Hello"
+
+// var status = "Hello"
 
 // T.post('/tweet', status, function(err, response){
     // if(err){
