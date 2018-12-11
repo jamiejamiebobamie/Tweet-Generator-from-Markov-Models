@@ -780,7 +780,7 @@ input[type="button"]{
 <div class="nabar">
 
 <div class="jar_button">
-    <input id="jar" style="width:130px;height:130px;border-radius: 12px;" type="button" value="jar" >
+    <input id="jar" style="width:130px;height:130px;border-radius: 12px;" type="button" onclick="setTimeout(myFunction1, 2000)" value="jar" >
 </div>
 
 <div class="jar_image">
@@ -831,7 +831,6 @@ input[type="button"]{
 <input id="Keep" type="button" value="Keep" >
 </div>
 
-<!-- <h1 id="title">{{grimmly}}</h1> -->
 
 
 <div class="popup1" onclick="goHere(0)">
@@ -985,12 +984,10 @@ button_9.addEventListener('click', function(e){
 })
 
 button_10.addEventListener('click', function(e){
+    console.log(clicked);
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.playbackRate = 1.5;
     video.loop = false;
-
-    titleElement.innerHTML = tweet;
-
 })
 
 video.onended = function(e) {

@@ -226,7 +226,7 @@ return tweet.toString()
   // console.log('App listening on port 7000!')
 // })
 
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 15000;
 // var server = app.listen(process.env.PORT || 8000, function () {
   // var port = server.address().port;
   // console.log("Express is working on port " + port);
@@ -250,7 +250,7 @@ var status;
      tCarroll = run(4);
      tShakespeare = run(5);
      tLovecraft = run(6);
-     res.render('tweet', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
+     res.render('tweet2', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
 
      status = [tGrimm, tPoe, tWilde, tWoolf, tCarroll, tShakespeare, tLovecraft];
 

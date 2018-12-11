@@ -302,15 +302,84 @@ input[type="button"]{
         opacity: 0;
     }
 
+    /* .bird_container{
+        z-index: 15;
+        transform: rotate(2.5deg);
+
+    } */
+
+    #bird{
+        float:left;
+        height: 5px;
+        width: 7px;
+        top: 700px;
+        left: 320px;
+        position: relative;
+        z-index: 10;
+    }
+
+    #bird-light{
+        float:left;
+        height: 5px;
+        width: 7px;
+        top: 676px;
+        left: 338px;
+        position: relative;
+        z-index: 11;
+        opacity: .2;
+        transform: scale(.9)
+    }
+
+    #wing1{
+        float:left;
+        height: 5px;
+        width: 3px;
+        top: 766px;
+        left:760px;
+        position: relative;
+        z-index: 11;
+        transform: rotate(30deg);
+    }
+
+    #wing2{
+        float: left;
+        top: 780px;
+        left: 660px;
+        position: relative;
+        z-index: 12;
+        transform: rotate(20deg) scaleX(1) scaleY(.2);
+    }
+
     </style>
 
   </head>
 
 
 
- <body bgcolor="#E6E6FA">
+ <body bgcolor="white">
 
-     <div class="video-container">
+<!-- <body bgcolor="#E6E6FA"> -->
+
+<div class="bird_container">
+    <firgure id=bird>
+        <img id="body" src="../public/bird-black_backup.png">
+    </firgure>
+
+    <!-- <firgure id=wing1>
+        <img id="left" src="../public/bird-wing1_copy_3.png">
+    </firgure>
+
+    <firgure id=wing2>
+        <img id="right" src="../public/bird-wing2_copy_3.png">
+    </firgure> -->
+
+    <firgure id=bird-light>
+        <img id="light" src="../public/bird-light4a.png">
+    </firgure>
+
+</div>
+
+<div class="video-container">
 
   <div class="dynamic">
   <video autoplay muted loop id="myVideo">
