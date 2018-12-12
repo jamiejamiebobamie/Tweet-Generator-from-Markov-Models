@@ -102,7 +102,7 @@
         left:23.1%;
     }
 
-.Grimm{
+/* .Grimm{
     background: orange;
     z-index:2;
     animation: pulse 5s infinite;
@@ -195,6 +195,120 @@
     bottom: 360px;
     left:57.2%;
     margin-left:-150px;
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+
+.Lovecraft{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 370px;
+    left:63.2%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+} */
+
+.Grimm{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:bottom; */
+    top: 600px;
+    left:232px;
+    /* margin-left:-150px; */
+    transform: rotate(5deg);
+    border-radius: 10px;
+}
+
+.Poe{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 680px;
+    left:470px;
+    /* margin-left:-150px; */
+    transform: rotate(3deg);
+    border-radius: 10px;
+}
+
+.Wilde{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 617px;
+    left:621px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Woolf{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 688px;
+    left:713px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Carroll{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 690px;
+    left:841px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+
+.Shakespeare{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    top: 570px;
+    left:1100px;
+    margin-left:-150px;
     /* transform: rotate(1deg); */
     border-radius: 10px;
 }
@@ -208,13 +322,14 @@
     opacity: 0;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    float:left;
-    bottom: 370px;
-    left:63.2%;
-    margin-left:-150px;
+    /* float:left; */
+    top: 650px;
+    left:1060px;
+    /* margin-left:-150px; */
     transform: rotate(.01deg);
     border-radius: 10px;
 }
+
 
 .tweet_button{
     /* background: orange; */
@@ -308,7 +423,7 @@ input[type="button"]{
 
     } */
 
-    #bird{
+    #birdShadow{
         float:left;
         height: 5px;
         width: 7px;
@@ -316,17 +431,30 @@ input[type="button"]{
         left: 320px;
         position: relative;
         z-index: 10;
+        opacity: 1;
     }
 
-    #bird-light{
+    #birdLight{
         float:left;
         height: 5px;
         width: 7px;
         top: 676px;
         left: 338px;
         position: relative;
-        z-index: 11;
+        z-index: 12;
         opacity: .2;
+        transform: scale(.9)
+    }
+
+    #birdBlack{
+        float:left;
+        height: 5px;
+        width: 7px;
+        top: 676px;
+        left: 330px;
+        position: relative;
+        z-index: 11;
+        opacity: 0;
         transform: scale(.9)
     }
 
@@ -361,8 +489,8 @@ input[type="button"]{
 <!-- <body bgcolor="#E6E6FA"> -->
 
 <div class="bird_container">
-    <firgure id=bird>
-        <img id="body" src="../public/bird-black_backup.png">
+    <firgure id=birdShadow>
+        <img id="bodyShadow" src="../public/bird-black_backup.png">
     </firgure>
 
     <!-- <firgure id=wing1>
@@ -373,9 +501,14 @@ input[type="button"]{
         <img id="right" src="../public/bird-wing2_copy_3.png">
     </firgure> -->
 
-    <firgure id=bird-light>
-        <img id="light" src="../public/bird-light4a.png">
+    <!-- <firgure id=birdLight>
+        <img id="light" src="../public/bird-light4d.png">
     </firgure>
+
+
+    <firgure id=birdBlack>
+        <img id="black" src="../public/bird-light4e.png">
+    </firgure> -->
 
 </div>
 
@@ -443,7 +576,7 @@ input[type="button"]{
 <input id="Keep" type="button" value="Keep" >
 </div>
 
-<h1 id="title">helo hllo</h1>
+<!-- <h1 id="title">helo hllo</h1> -->
 
 <!-- <div class="test">
      <input id="butt" type="button" value="Try it">
@@ -591,15 +724,21 @@ input[type="button"]{
 
 <script>
 var video = document.getElementById("myVideo");
+var video2 = document.getElementById("myVideo-background");
+
+var birdShadow = document.getElementById("birdShadow");
+var birdLight = document.getElementById("birdLight");
+var birdBlack = document.getElementById("birdBlack");
+
 video.playbackRate = 1;
 
-const button_1 = document.getElementById("Grimm");
-const button_2 = document.getElementById("Poe");
-const button_3 = document.getElementById("Wilde");
-const button_4 = document.getElementById("Woolf");
-const button_5 = document.getElementById("Carroll");
-const button_6 = document.getElementById("Shakespeare");
-const button_7 = document.getElementById("Lovecraft");
+// const button_1 = document.getElementById("Grimm");
+// const button_2 = document.getElementById("Poe");
+// const button_3 = document.getElementById("Wilde");
+// const button_4 = document.getElementById("Woolf");
+// const button_5 = document.getElementById("Carroll");
+// const button_6 = document.getElementById("Shakespeare");
+// const button_7 = document.getElementById("Lovecraft");
 const button_8 = document.getElementById("Tweet");
 const button_9 = document.getElementById("Keep");
 
@@ -613,66 +752,73 @@ var clip = "../finals/5door-closed-C.mp4";
 const clips = ["../finals/jar1-final.mp4", "../finals/jar2-final-C.mp4", "../finals/jar3-final-D.mp4", "../finals/jar4-final-F.mp4", "../finals/jar5-final-F.mp4", "../finals/jar6-final-B.mp4", "../finals/jar7-final-B.mp4", "../finals/2door-opening.mp4", "../finals/3door open.mp4", "../finals/4door-closing.mp4", "../finals/1door-closed-A.mp4"]
 const shocks = ["../finals/jar1-final.mp4", "../finals/jar2-final-C.mp4", "../finals/jar3-final-D.mp4", "../finals/jar4-final-F.mp4", "../finals/jar5-final-F.mp4", "../finals/jar6-final-B.mp4", "../finals/jar7-final-B.mp4"]
 
-button_1.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-//    titleElement.innerHTML = "grimm";
-    video.setAttribute("src", clips[0]);
-    video.load();
-    video.playbackRate = 1.2;
-    video.loop = false;
-    tweet = run();
-    titleElement.innerHTML = tweet;
-})
 
-button_2.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
+// function flicker(){
+//     birdShadow.style.opacity(0);
+//     birdLight.style.opacity(.2);
+// };
 
-    video.setAttribute("src", clips[1]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-    titleElement.innerHTML = 'pee';
-})
-
-button_3.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-    video.setAttribute("src", clips[2]);
-    video.load();
-    video.playbackRate = 1.4;
-    video.loop = false;
-})
-
-button_4.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-    video.setAttribute("src", clips[3]);
-    video.load();
-    video.playbackRate = 1.5;
-    video.loop = false;
-})
-
-button_5.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-    video.setAttribute("src", clips[4]);
-    video.load();
-    video.playbackRate = 1.4;
-    video.loop = false;
-})
-
-button_6.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-    video.setAttribute("src", clips[5]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-})
-
-button_7.addEventListener('click', function(e){
-    //num = Math.floor(Math.random() * Math.floor(clips.length))
-    video.setAttribute("src", clips[6]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-})
+//
+// button_1.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+// //    titleElement.innerHTML = "grimm";
+//     video.setAttribute("src", clips[0]);
+//     video.load();
+//     video.playbackRate = 1.2;
+//     video.loop = false;
+//     tweet = run();
+//     titleElement.innerHTML = tweet;
+// })
+//
+// button_2.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//
+//     video.setAttribute("src", clips[1]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+//     titleElement.innerHTML = 'pee';
+// })
+//
+// button_3.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//     video.setAttribute("src", clips[2]);
+//     video.load();
+//     video.playbackRate = 1.4;
+//     video.loop = false;
+// })
+//
+// button_4.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//     video.setAttribute("src", clips[3]);
+//     video.load();
+//     video.playbackRate = 1.5;
+//     video.loop = false;
+// })
+//
+// button_5.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//     video.setAttribute("src", clips[4]);
+//     video.load();
+//     video.playbackRate = 1.4;
+//     video.loop = false;
+// })
+//
+// button_6.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//     video.setAttribute("src", clips[5]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+// })
+//
+// button_7.addEventListener('click', function(e){
+//     //num = Math.floor(Math.random() * Math.floor(clips.length))
+//     video.setAttribute("src", clips[6]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+// })
 
 button_8.addEventListener('click', function(e){
     //num = Math.floor(Math.random() * Math.floor(clips.length))
@@ -681,6 +827,9 @@ button_8.addEventListener('click', function(e){
     video.playbackRate = 1;
     video.loop = false;
     open = true;
+    video2.setAttribute("src", clips[8]);
+    video2.load();
+    video2.loop = false;
 })
 
 button_9.addEventListener('click', function(e){
@@ -690,12 +839,17 @@ button_9.addEventListener('click', function(e){
     video.playbackRate = 1;
     video.loop = false;
     open = false;
+    video2.setAttribute("src", clips[8]);
+    video2.load();
+    video2.loop = false;
 })
 
 button_10.addEventListener('click', function(e){
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.playbackRate = 1.5;
     video.loop = false;
+    flicker();
+
 })
 
 video.onended = function(e) {
@@ -704,13 +858,20 @@ video.onended = function(e) {
     video.load();
     video.playbackRate = 1.3;
     video.loop = true;
+    birdShadow.style.opacity = '1';
+    birdLight.style.opacity = '.2';
+    birdBlack.style.opacity = '0';
 } else {
     video.setAttribute("src", clips[8]);
     video.load();
     video.playbackRate = 1.7;
     video.loop = true;
+    birdShadow.style.opacity = '.9';
+    birdLight.style.opacity = '.2';
+    birdBlack.style.opacity = '1';
 }
     };
+
 
 </script>
 
