@@ -1,9 +1,4 @@
-var fs = require("fs");
-
-module.exports = (app) => {
-
-console.log("hey")
-
+const fs = require("fs");
 
 function chooseRandomFile(){
     var files = ["Wilde.md", "Shakespeare.md", "Grimm.md", "Carroll.md", "Lovecraft.md", "Woolf.md", "Poe.md"];
@@ -11,6 +6,8 @@ function chooseRandomFile(){
 }
 
 function fileToArray(file){
+    file = __dirname + "/corpi/" + file
+    console.log(file)
     var text = fs.readFileSync(file).toString('utf-8');
     var words = text.split(" ")
     return words
@@ -131,8 +128,135 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
     }
     return [tweet, even]
 }}
+//
+// module.exports.chooseRandomFile = function (){
+//     var files = ["Wilde.md", "Shakespeare.md", "Grimm.md", "Carroll.md", "Lovecraft.md", "Woolf.md", "Poe.md"];
+//     return files[Math.floor(Math.random() * Math.floor(files.length))];
+// }
+//
+// module.exports.fileToArray = function (file){
+//     var text = fs.readFileSync(file).toString('utf-8');
+//     var words = text.split(" ")
+//     return words
+// }
+//
+// module.exports.arrayToString = function (array){
+//      var string = ""
+//      var i;
+//      for (i = 0; i < array.length; i++) {
+//          string += array[i].toString('utf-8') + " "}
+//      return string;
+// }
+//
+// module.exports.wordBeforeAfter = function (array, word, n) {
+//    var instances = []
+//    for (var i = 0; i < array.length; i++) {
+//        if (array[i] == word){
+//            var x = i - 1;
+//            var beforeWords = [];
+//            while (x > i - n) {
+//             beforeWords.push(array[x]);
+//                 x -= 1;
+//                 }
+//                 var myInstance = [word, beforeWords, array[i+1]];
+//                 instances.push(myInstance)
+//                 }
+//              }
+//              return instances
+//            }
+//
+// module.exports.nextWords = function (instances) {
+//     var lenInt = 0
+//     var next = {};
+//     for (var i = 0; i < instances.length; i++) {
+//         if (instances[i][2] in next) {
+//             next[instances[i][2]] += 1;
+//         } else {
+//             next[instances[i][2]] = 1
+//         }
+//         if (lenInt < next[instances[i][2]]){
+//             lenInt = next[instances[i][2]]
+//         };
+//     }
+//     return ([next, lenInt])
+// };
+//
+// module.exports.pickRand = function (nexts){
+//     var rand = Math.floor(Math.random() * Math.floor(nexts[1]));
+//     if (rand != 0){
+//         return rand;
+//     } else {
+//         return 1;
+//     }
+// }
+//
+// module.exports.valuestoKeys = function (nexts){
+//     var max = nexts[1];
+//     var newDict = {}
+//     var arrKeys = Object.keys(nexts[0])
+//     var arrValues = Object.values(nexts[0])
+//     for (var i = 0; i < arrValues.length; i++){
+//         if (arrValues[i] in newDict) {
+//         newDict[arrValues[i]].push(arrKeys[i]);
+//     } else {
+//         newDict[arrValues[i]] = [arrKeys[i]]
+//     }
+//     }
+//     return newDict
+// }
+//
+// var punc = [".", "!", "?", ";", ","]
+//
+// var myAuthors = {
+//     "Poe": "Edgar Allan Poe",
+//     "Lovecraft": "HP Lovecraft",
+//     "Woolf": "Virginia Woolf",
+//     "Shakespeare": "William Shakespeare",
+//     "Carroll": "Lewis Carroll",
+//     "Wilde": "Oscar Wilde",
+//     "Grimm": "The Brothers Grimm",
+// }
+//
+// module.exports.check = function (tweet){ //slows it down like crazy and all of the if statements don't work properly...
+//     var even = false;
+//     var count = 0;
+//
+//     for (var i=0; i < (tweet.length); i++) {
+//
+//         if (i == 0 && tweet[i] == " ") {
+//             tweet = tweet.substring(1, tweet.length);
+//         }
+//
+//         if (tweet[i] == "\"") {
+//             count++;
+//         }
+//         if (tweet.substring(tweet.length-3, tweet.length-1) == "and") {
+//             tweet = tweet + "...";
+//         }
+//         if (i == (tweet.length-1) && tweet[i] == ",") {
+//                 tweet = tweet.substring(0, tweet.length-1);
+//                 console.log(tweet[i])
+//         // } else if (i == (tweet.length-1) && punc.includes(tweet[i]) ){
+//             //
+//         // } else if (i == (tweet.length-1) && punc.includes(tweet[i]) ){
+//             // tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
+//             // tweet = tweet + "."
+//         } else if (i == (tweet.length-1) && punc.includes(tweet[i])) {
+//             tweet = tweet;
+//         } else {
+//             tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
+//             tweet = tweet + ".";
+//         }
+//
+//     if (count%2 != 0 && count != 0) {
+//         even = true;
+//     } else {
+//         even = false;
+//     }
+//     return [tweet, even]
+// }}
 
-function run(){
+module.exports.run = function (){
 var n = 6;
 var file = chooseRandomFile();
 var fileArray = fileToArray(file);
@@ -165,6 +289,4 @@ if (odd){
  tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
 
 return tweet
-}
-
 }

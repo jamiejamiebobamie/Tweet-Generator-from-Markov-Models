@@ -1,3 +1,5 @@
+const dotenv = require('dotenv').config();
+
 const express = require('express')
 const app = express()
 
@@ -32,70 +34,55 @@ app.set('view engine', 'handlebars');
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
 
+const fs = require("fs");
+
 const generator = require('./public/scripts/tweet.js');
-// console.log(generator.chooseRandomFile())
 
 const port = process.env.PORT || 13000;
 
-var tGrimm;
-var tPoe;
-var tWilde;
-var tWoolf;
-var tCarroll;
-var tShakespeare;
-var tLovecraft;
+var tweet_Grimm;
+var tweet_Poe;
+var tweet_Wilde;
+var tweet_Woolf;
+var tweet_Carroll;
+var tweet_Shakespeare;
+var tweet_Lovecraft;
+
 var status;
 
  app.get('/', (req, res) => {
-     var num;
-     tGrimm = run(0);
-     tPoe = run(1);
-     tWilde = run(2);
-     tWoolf = run(3);
-     tCarroll = run(4);
-     tShakespeare = run(5);
-     tLovecraft = run(6);
-     res.render('tweet', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
 
-     status = [tGrimm, tPoe, tWilde, tWoolf, tCarroll, tShakespeare, tLovecraft];
- });
+     tweet_Grimm = generator.run(0);
+     tweet_Poe = generator.run(1);
+     tweet_Wilde = generator.run(2);
+     tweet_Woolf = generator.run(3);
+     tweet_Carroll = generator.run(4);
+     tweet_Shakespeare = generator.run(5);
+     tweet_Lovecraft = generator.run(6);
 
- app.get('/tweet2', (req, res) => {
-     var num;
-     tGrimm = run(0);
-     tPoe = run(1);
-     tWilde = run(2);
-     tWoolf = run(3);
-     tCarroll = run(4);
-     tShakespeare = run(5);
-     tLovecraft = run(6);
-     status = [tGrimm, tPoe, tWilde, tWoolf, tCarroll, tShakespeare, tLovecraft];
-     res.render('tweet2', { msg1: tGrimm, msg2: tPoe, msg3: tWilde, msg4: tWoolf, msg5: tCarroll, msg6: tShakespeare, msg7: tLovecraft});
+     res.render('tweet', { msg1: tweet_Grimm, msg2: tweet_Poe, msg3: tweet_Wilde, msg4: tweet_Woolf, msg5: tweet_Carroll, msg6: tweet_Shakespeare, msg7: tweet_Lovecraft});
  });
 
 // ------------ https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
 
-
-var postBody = {
-	'status': status
-};
-
-// console.log('Ready to Tweet article:\n\t', postBody.status);
-oauth.post('https://api.twitter.com/1.1/statuses/update.json',
-	twitter_user_access_token,  // oauth_token (user access token)
-    twitter_user_secret,  // oauth_secret (user secret)
-    postBody,  // post body
-    '',  // post content type ?
-	function(err, data, res) {
-		if (err) {
-			console.log(err);
-		} else {
-			// console.log(data);
-		}
-	});
-
-// -- https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
+// status = 'hello'
+//
+// var postBody = {
+// 	'status': status
+// };
+//
+// // console.log('Ready to Tweet article:\n\t', postBody.status);
+// oauth.post('https://api.twitter.com/1.1/statuses/update.json',
+// 	twitter_user_access_token,  // oauth_token (user access token)
+//     twitter_user_secret,  // oauth_secret (user secret)
+//     postBody,  // post body
+//     '',  // post content type ?
+// 	function(err, data, res) {
+// 		if (err) {
+// 			console.log(err);
+// 		}
+// 	});
+//
+// // -- https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
 
 app.listen(port);
-
-// Hope you locked the fisherman, ‘how dreadful storm was so he put him so she jumped for a while, and the king, that. -The Brothers Grimm

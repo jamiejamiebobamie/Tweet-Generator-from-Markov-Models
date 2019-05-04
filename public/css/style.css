@@ -1,54 +1,662 @@
-/* Style the video: 100% width and height to cover the entire window */
 
-.dynamic, .static {
-    width: 50px;
-    height: 50px;
+    .popuptext{
+        font-family: monospace;
+        opacity: 0;
+        color: #ff9a00;
+    }
+
+    /* Popup container */
+    .popup1 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 500px;
+        left:280px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup1 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        /* background-color: #555; */
+        /* background-color: #ff9a00; */
+
+        opacity: 0.9;
+        /* color: black; */
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        /* z-index: 1; */
+        bottom: 125%;
+        /* left: 50%; */
+        /* margin-left: -80px; */
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+
+
+    /* Popup arrow */
+    .popup1 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup1 .show {
+        visibility: visible;
+        animation-delay: 2s;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s;
+        /* animation-timing-function: cubic-bezier(x2); */
+        z-index: 4
+    }
+
+
+        /* Add animation (fade in the popup) */
+        /* @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: .9;}
+            z-index: 4
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:.9 ;}
+            z-index: 4
+        } */
+
+
+    .popup2 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:455px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup2 .popuptext {
+        /* visibility: hidden; */
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup2 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup2 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+/*
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    } */
+
+    .popup3 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 540px;
+        left:585px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup3 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup3 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup3 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+/*
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    } */
+
+    .popup4 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:680px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup4 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup4 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup4 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+/*
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    } */
+
+    .popup5 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 600px;
+        left:805px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup5 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup5 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup5 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+
+/*
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    } */
+
+    .popup6 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 470px;
+        left:905px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup6 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup6 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup6 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+
+/*
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    } */
+
+    .popup7 {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 4;
+        top: 570px;
+        left:1073px;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup7 .popuptext {
+        visibility: hidden;
+        width: 160px;
+        opacity: 0.9;
+        text-align: center;
+        border-radius: 6px;
+        padding: 9px 0;
+        position: absolute;
+        bottom: 125%;
+        z-index: 4
+        font-family: monospace;
+        font-size: 1vw;
+    }
+
+    .popup7 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
+    }
+
+    .popup7 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s
+        z-index: 4
+    }
+
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: .9;}
+        z-index: 4
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:.9 ;}
+        z-index: 4
+    }
+
+.nabar{
     position: absolute;
-    top: 0;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 7;
+    top: 100px;
+    left:100px;
 }
 
-.dynamic{
-    z-index: 1
-}
-
-
-.button {
-    background: transparent;
-    border: none !important;
-    font-size:0;
-    z-index:1;
-    float:left;
+.tweet_button{
+    z-index:3;
     animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 175px;
+    left:94.2%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.tweet_image{
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .2;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 175.5px;
+    left:95%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.tweet_button:hover + .tweet_image {
+    opacity: .9;
+}
+
+.jar_button{
+    z-index:3;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 194px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.jar_image{
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: .2;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    bottom: 160px;
+    left:85%;
+    margin-left:-150px;
+    transform: rotate(.01deg);
+    border-radius: 10px;
+}
+
+.jar_button:hover + .jar_image {
+    opacity: .9;
+}
+
+    .test{
+        z-index:2;
+        position: absolute;
+        opacity: 0;
+        height: 100px;
+        width: 50%;
+        float:left;
+        top: 15px;
+        right:13%;
+        margin-left:-150px;
+    }
+
+    .dynamic, .static {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        /* object-fit: cover; */
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    }
+
+    .dynamic{
+        z-index: 1
+    }
+
+
+.Grimm{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:bottom; */
+    top: 600px;
+    left:232px;
+    /* margin-left:-150px; */
+    transform: rotate(5deg);
+    border-radius: 10px;
+}
+
+.Poe{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 680px;
+    left:470px;
+    /* margin-left:-150px; */
+    transform: rotate(3deg);
+    border-radius: 10px;
+}
+
+.Wilde{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 617px;
+    left:621px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Woolf{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 688px;
+    left:713px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
+}
+
+.Carroll{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 690px;
+    left:841px;
+    /* margin-left:-150px; */
+    transform: rotate(1deg);
+    border-radius: 10px;
 }
 
 
-body {background-color: pink;}
-
-h1 {
-    color: pink;
+.Shakespeare{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float:left;
+    top: 570px;
+    left:1100px;
+    margin-left:-150px;
+    /* transform: rotate(1deg); */
+    border-radius: 10px;
 }
 
-/*
-.content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-}
-*/
 
-/*
-container { position:relative; }
-.container video {
-    position:relative;
-    z-index:0;
+.Lovecraft{
+    background: orange;
+    z-index:2;
+    animation: pulse 5s infinite;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* float:left; */
+    top: 650px;
+    left:1060px;
+    /* margin-left:-150px; */
+    transform: rotate(.01deg);
+    border-radius: 10px;
 }
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
+
+input[type="button"]{
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ appearance: none;
 }
-*/
+
+
+    body {
+    background-color:#E6E6FA
+}
+
+    h1 {
+        animation: pulse 5s infinite;
+        color: #ff9a00;
+        position: absolute;
+        z-index: 10;
+        font-family: monospace;
+        size: 10px;
+        opacity: 1;
+        font-size: 1vw;
+    }
+
+    video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
