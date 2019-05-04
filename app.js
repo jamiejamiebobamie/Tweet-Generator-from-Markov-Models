@@ -63,26 +63,27 @@ var status;
      res.render('tweet', { msg1: tweet_Grimm, msg2: tweet_Poe, msg3: tweet_Wilde, msg4: tweet_Woolf, msg5: tweet_Carroll, msg6: tweet_Shakespeare, msg7: tweet_Lovecraft});
  });
 
-// ------------ https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
+ app.get('/new_tweet/:msg', (req, res) => {
+	 status = req.params.msg
 
-// status = 'hello'
-//
-// var postBody = {
-// 	'status': status
-// };
-//
-// // console.log('Ready to Tweet article:\n\t', postBody.status);
-// oauth.post('https://api.twitter.com/1.1/statuses/update.json',
-// 	twitter_user_access_token,  // oauth_token (user access token)
-//     twitter_user_secret,  // oauth_secret (user secret)
-//     postBody,  // post body
-//     '',  // post content type ?
-// 	function(err, data, res) {
-// 		if (err) {
-// 			console.log(err);
-// 		}
-// 	});
-//
-// // -- https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
+
+	 // ------------ https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
+	 var postBody = {
+	 	'status': status
+	 };
+	 // console.log('Ready to Tweet article:\n\t', postBody.status);
+	 oauth.post('https://api.twitter.com/1.1/statuses/update.json',
+	 	twitter_user_access_token,  // oauth_token (user access token)
+	     twitter_user_secret,  // oauth_secret (user secret)
+	     postBody,  // post body
+	     '',  // post content type ?
+	 	function(err, data, res) {
+	 		if (err) {
+	 			console.log(err);
+	 		}
+	 	});
+	res.redirect('https://twitter.com/writers_dead')
+ });
+
 
 app.listen(port);

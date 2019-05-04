@@ -210,9 +210,8 @@ if ("lovecraft" != on && lovecraftBool == true){
 
 }
 
-function goHere(num){
-        num = num;
-        console.log(num)
+function goHere(){
         // location.href='/tweet';
-        location.href='https://twitter.com/writers_dead';
+        location.href='new_tweet/:msg';
+        // location.href='https://twitter.com/writers_dead';
 }

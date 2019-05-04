@@ -7,7 +7,7 @@ function chooseRandomFile(){
 
 function fileToArray(file){
     file = __dirname + "/corpi/" + file
-    console.log(file)
+    // console.log(file)
     var text = fs.readFileSync(file).toString('utf-8');
     var words = text.split(" ")
     return words
