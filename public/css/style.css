@@ -345,7 +345,7 @@
     transition-duration: 0.4s;
     float:left;
     top: 6%;
-    left:20%;
+    left:50%;
     margin-left:-150px;
     transform: rotate(.01deg);
     border-radius: 10px;
@@ -360,7 +360,7 @@
     transition-duration: 0.4s;
     float:left;
     top: 6%;
-    left:20%;
+    left:50%;
     margin-left:-150px;
     transform: rotate(.01deg);
     border-radius: 10px;
@@ -393,7 +393,7 @@
     transition-duration: 0.4s;
     float:left;
     top: 3%;
-    left:10%;
+    left:25%;
     margin-left:-150px;
     transform: rotate(.01deg);
     border-radius: 10px;
@@ -408,7 +408,7 @@
     transition-duration: 0.4s;
     float:left;
     top: 3%;
-    left:10%;
+    left:25%;
     margin-left:-150px;
     transform: rotate(.01deg);
     border-radius: 10px;
@@ -570,7 +570,10 @@ input[type="button"]{
 
 
     body {
-    background-color:#E6E6FA
+        background: black;
+        color: black;
+        background-color:black;
+    /* background-color:#E6E6FA */
 }
 
     h1 {
