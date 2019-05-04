@@ -7,6 +7,7 @@
         font-family: monospace;
         opacity: 0;
         color: #ff9a00;
+        font-family: monospace;
     }
 
     /* Popup container */
@@ -22,23 +23,19 @@
     /* The actual popup (appears on top) */
     .popup1 .popuptext {
         visibility: hidden;
-        width: 160px;
-        /* background-color: #555; */
-        /* background-color: #ff9a00; */
-
+        /* width: 160px; */
+        width: 900px;
         opacity: 0.9;
-        /* color: black; */
         text-align: center;
         border-radius: 6px;
         padding: 9px 0;
         position: absolute;
-        /* z-index: 1; */
         bottom: 125%;
-        /* left: 50%; */
-        /* margin-left: -80px; */
-        z-index: 4
+        z-index: 4;
         font-family: monospace;
-        font-size: 1vw;
+        /* font-size: 1vw; */
+        font-size: 30px;
+
     }
 
 
