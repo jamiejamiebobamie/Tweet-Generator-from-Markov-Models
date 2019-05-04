@@ -256,9 +256,14 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
 //     return [tweet, even]
 // }}
 
-module.exports.run = function (){
+module.exports.run = function (notRandom){
 var n = 6;
-var file = chooseRandomFile();
+var files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
+var file = files[notRandom]
+// } else {
+//     file = chooseRandomFile();
+// }
+
 var fileArray = fileToArray(file);
 var word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
 var tweet = word
