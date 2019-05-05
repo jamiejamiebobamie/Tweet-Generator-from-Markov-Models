@@ -1,10 +1,33 @@
+    body {
+         background-color:black;
+    }
+
+    video:-webkit-media-controls-fullscreen-button{
+        display: none;
+    }
+
+    h1 {
+        animation: pulse 5s infinite;
+        color: #ff9a00;
+        position: absolute;
+        z-index: 10;
+        font-family: monospace;
+        size: 10px;
+        opacity: 1;
+        font-size: 1vw;
+    }
+
+    input[type="button"]{
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+    }
 
     .nav_background{
         z-index: 3
     }
 
     .popuptext{
-        font-family: monospace;
         opacity: 0;
         color: #ff9a00;
         font-family: monospace;
@@ -183,7 +206,6 @@
         z-index: 4
     }
 
-
     @-webkit-keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: .9;}
@@ -196,227 +218,187 @@
         z-index: 4
     }
 
-.tweet_button{
-    z-index:3;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    top: 6%;
-    left:50%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
+    .tweet_button{
+        z-index:3;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 6%;
+        left:50%;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
 
-.tweet_image{
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: .2;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    top: 6%;
-    left:50%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-    /* -webkit-animation: myanim 2s infinite alternate-reverse; */
-}
+    .tweet_image{
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: .2;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 6%;
+        left:50%;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+        /* -webkit-animation: myanim 2s infinite alternate-reverse; */
+    }
 
-.tweet_button:hover + .tweet_image {
-    opacity: .9;
-}
+    .tweet_button:hover + .tweet_image {
+        opacity: .9;
+    }
 
-.jar_button{
-    color: orange;
-    z-index:3;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    top: 3%;
-    left:25%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
+    .jar_button{
+        color: orange;
+        z-index:3;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 3%;
+        left:25%;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
 
-.jar_image{
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: .2;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    top: 3%;
-    left:25%;
-    margin-left:-150px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
+    .jar_image{
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: .2;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 3%;
+        left:25%;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
 
-.jar_button:hover + .jar_image {
-    opacity: .9;
-}
+    .jar_button:hover + .jar_image {
+        opacity: .9;
+    }
 
-.test{
-    z-index:2;
-    position: absolute;
-    opacity: 0;
-    height: 100px;
-    width: 50%;
-    float:left;
-    top: 15px;
-    right:13%;
-    margin-left:-150px;
-}
+    .dynamic, .static {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+    }
 
-.dynamic, .static {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
-    opacity: 1;
-}
+    .dynamic{
+        z-index: 1
+    }
 
-.dynamic{
-    z-index: 1
-}
+    .Grimm{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 600px;
+        left:232px;
+        transform: rotate(5deg);
+        border-radius: 10px;
+    }
 
-.Grimm{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 600px;
-    left:232px;
-    transform: rotate(5deg);
-    border-radius: 10px;
-}
+    .Poe{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 680px;
+        left:470px;
+        transform: rotate(3deg);
+        border-radius: 10px;
+    }
 
-.Poe{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 680px;
-    left:470px;
-    transform: rotate(3deg);
-    border-radius: 10px;
-}
+    .Wilde{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 617px;
+        left:621px;
+        transform: rotate(1deg);
+        border-radius: 10px;
+    }
 
-.Wilde{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 617px;
-    left:621px;
-    transform: rotate(1deg);
-    border-radius: 10px;
-}
+    .Woolf{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 688px;
+        left:713px;
+        transform: rotate(1deg);
+        border-radius: 10px;
+    }
 
-.Woolf{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 688px;
-    left:713px;
-    transform: rotate(1deg);
-    border-radius: 10px;
-}
+    .Carroll{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 690px;
+        left:841px;
+        transform: rotate(1deg);
+        border-radius: 10px;
+    }
 
-.Carroll{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 690px;
-    left:841px;
-    transform: rotate(1deg);
-    border-radius: 10px;
-}
+    .Shakespeare{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 570px;
+        left:1100px;
+        margin-left:-150px;
+        border-radius: 10px;
+    }
 
-.Shakespeare{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    float:left;
-    top: 570px;
-    left:1100px;
-    margin-left:-150px;
-    border-radius: 10px;
-}
-
-.Lovecraft{
-    background: orange;
-    z-index:2;
-    animation: pulse 5s infinite;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    top: 650px;
-    left:1060px;
-    transform: rotate(.01deg);
-    border-radius: 10px;
-}
-
-input[type="button"]{
-     -moz-appearance: none;
-     -webkit-appearance: none;
-     appearance: none;
-}
-
-body {
-     background-color:black;
-}
-
-video:-webkit-media-controls-fullscreen-button{
-    display: none;
-}
-
-h1 {
-    animation: pulse 5s infinite;
-    color: #ff9a00;
-    position: absolute;
-    z-index: 10;
-    font-family: monospace;
-    size: 10px;
-    opacity: 1;
-    font-size: 1vw;
-}
-
-
-}
+    .Lovecraft{
+        background: orange;
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        top: 650px;
+        left:1060px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
