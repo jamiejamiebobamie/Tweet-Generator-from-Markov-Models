@@ -66,7 +66,6 @@ var status;
  app.get('/new_tweet/:msg', (req, res) => {
 	 status = req.params.msg
 
-
 	 // ------------ https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
 	 var postBody = {
 	 	'status': status
