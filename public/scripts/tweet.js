@@ -5,20 +5,20 @@ function chooseRandomFile(){
     return files[Math.floor(Math.random() * Math.floor(files.length))];
 }
 
-// function fileToArray(file){
-//     file = __dirname + "/corpi/" + file
-//     var text = fs.readFileSync(file).toString('utf-8');
-//     var words = text.split(" ")
-//     return words
-// }
-
 function fileToArray(file){
-    //for testing...
-    file = "/Users/jamesmccrory/Documents/dev/tweet-gen-js/public/scripts/corpi/" + file
-    let text = fs.readFileSync(file).toString('utf-8');
-    let words = text.split(" ")
+    file = __dirname + "/corpi/" + file
+    var text = fs.readFileSync(file).toString('utf-8');
+    var words = text.split(" ")
     return words
 }
+
+// function fileToArray(file){
+//     //for testing...
+//     file = "/Users/jamesmccrory/Documents/dev/tweet-gen-js/public/scripts/corpi/" + file
+//     let text = fs.readFileSync(file).toString('utf-8');
+//     let words = text.split(" ")
+//     return words
+// }
 
  function arrayToString(array){
      let string = ""
@@ -134,89 +134,84 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
 }}
 
 module.exports.run = function (notRandom){
-let n = 6;
-let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
-let file = files[notRandom]
-let fileArray = fileToArray(file);
-let word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
-let tweet = word
+    let n = 7;
+    let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
+    let file = files[notRandom]
 
-while (tweet.length < 110) {
-    let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
-    let nexts = nextWords(arrayOfInstances); // next words
-    let valuesAsKeys = valuestoKeys(nexts); // dictionary of frequencies and arrays of words
-    let keysvTK = Object.keys(valuesAsKeys) // array of keys of frequencies
-    let value = Math.floor(Math.random() * Math.floor(keysvTK.length)); // random index out of the array of keys of frequencies
-    word = vTK[keysvTK[v]][Math.floor(Math.random() * Math.floor(vTK[keysvTK[v]].length - 1))] // random index out of the array of words for frequency 'v'
-    tweet = tweet + " " + word // 'word' NOT WEIGHTED -- HOW TO IMPLEMENT??
-}
+    let fileArray = fileToArray(file);
+    let word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
+    let tweet = word
 
-var author = file.slice(0, -3)
-
-var thing = check(tweet)
-var odd = thing[1]
-tweet = thing[0]
-
-if (odd){
-    tweet = tweet + "\"" + " -" + myAuthors[author];
-} else {
-    tweet = tweet + " -" + myAuthors[author];
-}
-
- tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
-
-return tweet
-}
-
-function run(notRandom){
-let n = 7;
-let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
-let file = files[notRandom]
-
-let fileArray = fileToArray(file);
-let word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
-let tweet = word
-
-while (tweet.length < 110) {
-    let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
-    let nexts = nextWords(arrayOfInstances); // next words
-    let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
-    let values = Object.keys(valuesDictionary) // array of keys of frequencies
-    let frequentWords = []
-    if (values.length >= 7){// if there's 5 or more options, pick the most frequent words...
-        let i = 0;
-        while (i < 7){
-            // console.log(values, values[values.length-i-1], valuesDictionary[values[values.length-i-1]])
-            frequentWords = frequentWords.concat(valuesDictionary[values[values.length-i-1]])
-            // console.log(frequentWords)
-            i+=1
+    while (tweet.length < 110) {
+        let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
+        let nexts = nextWords(arrayOfInstances); // next words
+        let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
+        let values = Object.keys(valuesDictionary) // array of keys of frequencies
+        let frequentWords = []
+        if (values.length >= 7){// if there's 5 or more options, pick the most frequent words...
+            let i = 0;
+            while (i < 7){
+                // console.log(values, values[values.length-i-1], valuesDictionary[values[values.length-i-1]])
+                frequentWords = frequentWords.concat(valuesDictionary[values[values.length-i-1]])
+                // console.log(frequentWords)
+                i+=1
+            }
+            let random_index_into_frequentWords = Math.floor(Math.random() * Math.floor(frequentWords.length)); // random index out of the array of keys of frequencies
+            word = frequentWords[random_index_into_frequentWords]
+            // console.log(word)
+        } else { // if the frequency is '1', pick a word from that frequency array...
+            let random_index_into_values = Math.floor(Math.random() * Math.floor(values.length)); // random index out of the array of keys of frequencies
+            word = valuesDictionary[values[random_index_into_values]][Math.floor(Math.random() * Math.floor(valuesDictionary[values[random_index_into_values]].length - 1))] // random index out of the array of words for frequency 'v'
         }
-        let random_index_into_frequentWords = Math.floor(Math.random() * Math.floor(frequentWords.length)); // random index out of the array of keys of frequencies
-        word = frequentWords[random_index_into_frequentWords]
-        // console.log(word)
-    } else { // if the frequency is '1', pick a word from that frequency array...
-        let random_index_into_values = Math.floor(Math.random() * Math.floor(values.length)); // random index out of the array of keys of frequencies
-        word = valuesDictionary[values[random_index_into_values]][Math.floor(Math.random() * Math.floor(valuesDictionary[values[random_index_into_values]].length - 1))] // random index out of the array of words for frequency 'v'
+        tweet = tweet + " " + word
     }
-    tweet = tweet + " " + word
-}
 
-var author = file.slice(0, -3)
-
-var thing = check(tweet)
-var odd = thing[1]
-tweet = thing[0]
-
-if (odd){
-    tweet = tweet + "\"" + " -" + myAuthors[author];
+    let author = file.slice(0, -3)
+    if (tweet[tweet.length-1]!="."){
+    tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + "." + " -" + myAuthors[author];
 } else {
-    tweet = tweet + " -" + myAuthors[author];
+    tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + " -" + myAuthors[author];
+}
+    return tweet
 }
 
- tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
-
-return tweet
-}
-
-
-console.log(run(0))
+// function run(notRandom){
+// let n = 7;
+// let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
+// let file = files[notRandom]
+//
+// let fileArray = fileToArray(file);
+// let word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
+// let tweet = word
+//
+// while (tweet.length < 110) {
+//     let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
+//     let nexts = nextWords(arrayOfInstances); // next words
+//     let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
+//     let values = Object.keys(valuesDictionary) // array of keys of frequencies
+//     let frequentWords = []
+//     if (values.length >= 7){// if there's 5 or more options, pick the most frequent words...
+//         let i = 0;
+//         while (i < 7){
+//             // console.log(values, values[values.length-i-1], valuesDictionary[values[values.length-i-1]])
+//             frequentWords = frequentWords.concat(valuesDictionary[values[values.length-i-1]])
+//             // console.log(frequentWords)
+//             i+=1
+//         }
+//         let random_index_into_frequentWords = Math.floor(Math.random() * Math.floor(frequentWords.length)); // random index out of the array of keys of frequencies
+//         word = frequentWords[random_index_into_frequentWords]
+//         // console.log(word)
+//     } else { // if the frequency is '1', pick a word from that frequency array...
+//         let random_index_into_values = Math.floor(Math.random() * Math.floor(values.length)); // random index out of the array of keys of frequencies
+//         word = valuesDictionary[values[random_index_into_values]][Math.floor(Math.random() * Math.floor(valuesDictionary[values[random_index_into_values]].length - 1))] // random index out of the array of words for frequency 'v'
+//     }
+//     tweet = tweet + " " + word
+// }
+//
+// var author = file.slice(0, -3)
+// tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1)+ "." + " -" + myAuthors[author];
+// return tweet
+// }
+//
+//
+// console.log(run(0))

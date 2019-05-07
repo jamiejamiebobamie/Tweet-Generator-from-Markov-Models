@@ -97,6 +97,7 @@ button_10.addEventListener('click', function(e){
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.playbackRate = 1.5;
     video.loop = false;
+    setTimeout(goHere,1000);
 })
 
 video.onended = function(e) {
@@ -235,6 +236,7 @@ if ("lovecraft" != on && lovecraftBool == true){
 
 function goHere(){
         // location.href='/tweet';
-        location.href='new_tweet/:msg';
+        // location.href='new_tweet/:msg';
         // location.href='https://twitter.com/writers_dead';
+        location.href='/';
 }

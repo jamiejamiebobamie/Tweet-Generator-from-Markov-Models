@@ -11,7 +11,7 @@
         color: #ff9a00;
         position: absolute;
         z-index: 10;
- font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
         size: 10px;
         opacity: 1;
         font-size: 1vw;
@@ -35,13 +35,13 @@
     }
 
     /* Popup container */
-    .popup1 {
+    .popup1, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7 {
         position: absolute;
         display: inline-block;
         cursor: pointer;
         z-index: 4;
         top: 400px;
-        left:280px;
+        left:250px;
     }
 
     /* The actual popup (appears on top) */
@@ -55,21 +55,8 @@
         position: absolute;
         bottom: 125%;
         z-index: 4;
- font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 30px;
-    }
-
-    /* Popup arrow */
-    .popup1 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
     }
 
     /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -81,13 +68,18 @@
         z-index: 4;
     }
 
-    .popup2 {
+    /* Popup arrow */
+    /* All of these are teh same, but they are all required for it function properly. */
+    .popup1 .popuptext::after {
+        content: "";
         position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        z-index: 4
     }
 
     .popup2 .popuptext::after {
@@ -102,15 +94,6 @@
         z-index: 4
     }
 
-    .popup3 {
-        position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
-    }
-
     .popup3 .popuptext::after {
         content: "";
         position: absolute;
@@ -121,15 +104,6 @@
         border-style: solid;
         border-color: #555 transparent transparent transparent;
         z-index: 4
-    }
-
-    .popup4 {
-        position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
     }
 
     .popup4 .popuptext::after {
@@ -144,15 +118,6 @@
         z-index: 4
     }
 
-    .popup5 {
-        position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
-    }
-
     .popup5 .popuptext::after {
         content: "";
         position: absolute;
@@ -165,15 +130,6 @@
         z-index: 4
     }
 
-    .popup6 {
-        position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
-    }
-
     .popup6 .popuptext::after {
         content: "";
         position: absolute;
@@ -184,15 +140,6 @@
         border-style: solid;
         border-color: #555 transparent transparent transparent;
         z-index: 4
-    }
-
-    .popup7 {
-        position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 400px;
-        left:280px;
     }
 
     .popup7 .popuptext::after {
