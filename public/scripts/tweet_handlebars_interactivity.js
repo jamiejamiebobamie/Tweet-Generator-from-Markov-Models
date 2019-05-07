@@ -17,7 +17,7 @@ var titleElement = document.getElementById('title');
 var open = false;
 var tweet;
 
-var clip = "/videos/5door-closed-C.mp4";
+var clip = "/videos/idle1.mp4";
 const clips = ["/videos/jar1-final.mp4", "/videos/jar2-final-C.mp4", "/videos/jar3-final-D.mp4", "/videos/jar4-final-F.mp4", "/videos/jar5-final-F.mp4", "/videos/jar6-final-B.mp4", "/videos/jar7-final-B.mp4", "/videos/1door-closed-A.mp4"]
 const shocks = ["/videos/jar1-final.mp4", "/videos/jar2-final-C.mp4", "/videos/jar3-final-D.mp4", "/videos/jar4-final-F.mp4", "/videos/jar5-final-F.mp4", "/videos/jar6-final-B.mp4", "/videos/jar7-final-B.mp4"]
 
@@ -100,7 +100,7 @@ button_10.addEventListener('click', function(e){
 })
 
 video.onended = function(e) {
-    video.setAttribute("src", clips[10]);
+    video.setAttribute("src", clip);
     video.load();
     video.playbackRate = 1.3;
     video.loop = true;

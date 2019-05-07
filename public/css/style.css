@@ -1,7 +1,7 @@
 
 
 html {background-color: black;}
-
+body{background-color: black;}
 
     video:-webkit-media-controls-fullscreen-button{
         display: none;
@@ -24,8 +24,14 @@ html {background-color: black;}
          appearance: none;
     }
 
-    .nav_background{
-        z-index: 3
+    .nav, .navbar, .container-fluid, .navbar-header, .nav_background{
+        color: transparent;
+        background-color: transparent;
+        z-index: 4;
+        margin:  25px;
+        border: 0px;
+        border-color: transparent;
+        width: 100%;
     }
 
     .popuptext{
@@ -174,12 +180,12 @@ html {background-color: black;}
         opacity: 0;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        float:left;
-        top: 6%;
-        left:50%;
+        float:right;
+        /* top: 10%; */
+        right:25%;
         margin-left:-150px;
         transform: rotate(.01deg);
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .tweet_image{
@@ -189,12 +195,12 @@ html {background-color: black;}
         opacity: .2;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        float:left;
-        top: 6%;
-        left:50%;
+        float:right;
+        /* top: 10%; */
+        right:25%;
         margin-left:-150px;
         transform: rotate(.01deg);
-        border-radius: 10px;
+        border-radius: 20px;
         /* -webkit-animation: myanim 2s infinite alternate-reverse; */
     }
 
@@ -211,7 +217,7 @@ html {background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 3%;
+        /* top: 3%; */
         left:25%;
         margin-left:-150px;
         transform: rotate(.01deg);
@@ -226,7 +232,7 @@ html {background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 3%;
+        /* top: 3%; */
         left:25%;
         margin-left:-150px;
         transform: rotate(.01deg);
