@@ -92,7 +92,6 @@ button_8.addEventListener('click', function(e){
     location.href='https://twitter.com/writers_dead';
 })
 
-
 button_10.addEventListener('click', function(e){
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.playbackRate = 1.5;
@@ -212,7 +211,7 @@ if ("lovecraft" != on && lovecraftBool == true){
 }
 
 // $( function() {
-// 		$( ".jar_image" ).mgGlitch({
+// 		$( ".sprite_test" ).mgGlitch({
 //           // set 'true' to stop the plugin
 // 				  destroy : false,
 //           // set 'false' to stop glitching
@@ -224,13 +223,13 @@ if ("lovecraft" != on && lovecraftBool == true){
 //           // select blend mode type
 //           blendModeType : 'hue',
 //           // set min time for glitch 1 elem
-//           glitch1TimeMin : 1000,
+//           glitch1TimeMin : 10,
 //           // set max time for glitch 1 elem
 //           glitch1TimeMax : 1400,
 //           // set min time for glitch 2 elem
 //           glitch2TimeMin : 30,
 //           // set max time for glitch 2 elem
-//           glitch2TimeMax : 50,
+//           glitch2TimeMax : 100,
 // 		});
 // });
 

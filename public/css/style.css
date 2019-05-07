@@ -1,6 +1,7 @@
-    body {
-         background-color:black;
-    }
+
+
+html {background-color: black;}
+
 
     video:-webkit-media-controls-fullscreen-button{
         display: none;
@@ -350,3 +351,28 @@
         transform: rotate(.01deg);
         border-radius: 10px;
     }
+
+
+.sprite_test{
+    position:absolute;
+    bottom:450px;
+    left:25%;
+    width: 640px;
+    height: 360px;
+    background: url('/imgs/idle_sprite_test.png') left center;
+    animation: idle 2.5s steps(27) infinite;
+}
+
+.static_sprite_background{
+    /* adds a static background of open eyes for when the animation 'pops' out */
+    position:absolute;
+    bottom:450px;
+    left:25%;
+    width: 640px;
+    height: 360px;
+}
+
+@keyframes idle{
+  from{background-position-x:0px;}
+  to{background-position-x:-17280px;}
+}
