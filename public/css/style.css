@@ -11,7 +11,7 @@
         color: #ff9a00;
         position: absolute;
         z-index: 10;
-        font-family: monospace;
+ font-family: 'Roboto', Arial, Helvetica, sans-serif;
         size: 10px;
         opacity: 1;
         font-size: 1vw;
@@ -28,9 +28,10 @@
     }
 
     .popuptext{
+        /* position: absolute; */
         opacity: 0;
         color: #ff9a00;
-        font-family: monospace;
+         font-family: 'Roboto', Arial, Helvetica, sans-serif;
     }
 
     /* Popup container */
@@ -54,7 +55,7 @@
         position: absolute;
         bottom: 125%;
         z-index: 4;
-        font-family: monospace;
+ font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 30px;
     }
 
