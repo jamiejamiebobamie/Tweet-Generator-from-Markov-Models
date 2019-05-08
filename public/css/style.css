@@ -208,7 +208,7 @@ body{background-color: black;}
         z-index:3;
         animation: pulse 5s infinite;
         position: absolute;
-        opacity: .2;
+        opacity: .1;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
@@ -221,7 +221,7 @@ body{background-color: black;}
     }
 
     .tweet_button:hover + .tweet_image {
-        opacity: .8;
+        opacity: .5;
     }
 
     .jar_button{
@@ -244,7 +244,7 @@ body{background-color: black;}
         z-index:3;
         animation: pulse 5s infinite;
         position: absolute;
-        opacity: .2;
+        opacity: .1;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
@@ -256,7 +256,7 @@ body{background-color: black;}
     }
 
     .jar_button:hover + .jar_image {
-        opacity: .8;
+        opacity: .5;
     }
 
     .dynamic, .static {
