@@ -34,6 +34,22 @@ body{background-color: black;}
         width: 100%;
     }
 
+    .hud{
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 1;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:right;
+        /* top: 10%; */
+        left:0%;
+        margin-left:0px;
+        transform: rotate(.01deg);
+        border-radius: 20px;
+        /* -webkit-animation: myanim 2s infinite alternate-reverse; */
+    }
+
     .popuptext{
         /* position: absolute; */
         opacity: 0;
@@ -47,8 +63,8 @@ body{background-color: black;}
         display: inline-block;
         cursor: pointer;
         z-index: 4;
-        top: 400px;
-        left:250px;
+        top: 440px;
+        left:190px;
     }
 
     /* The actual popup (appears on top) */
@@ -174,30 +190,30 @@ body{background-color: black;}
     }
 
     .tweet_button{
-        z-index:3;
+        z-index:4;
         animation: pulse 5s infinite;
         position: absolute;
         opacity: 0;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        float:right;
-        /* top: 10%; */
-        right:25%;
+        float:left;
+        top: 140px;
+        left:720px;
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 20px;
     }
 
     .tweet_image{
-        z-index:2;
+        z-index:3;
         animation: pulse 5s infinite;
         position: absolute;
         opacity: .2;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        float:right;
-        /* top: 10%; */
-        right:25%;
+        float:left;
+        top: 140px;
+        left:720px;
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 20px;
@@ -210,37 +226,37 @@ body{background-color: black;}
 
     .jar_button{
         color: orange;
-        z-index:3;
+        z-index:4;
         animation: pulse 5s infinite;
         position: absolute;
         opacity: 0;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        /* top: 3%; */
-        left:25%;
+        top: 70px;
+        left:355px;
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 10px;
     }
 
     .jar_image{
-        z-index:2;
+        z-index:3;
         animation: pulse 5s infinite;
         position: absolute;
-        opacity: .2;
+        opacity: .1;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        /* top: 3%; */
-        left:25%;
+        top: 70px;
+        left:355px;
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 10px;
     }
 
     .jar_button:hover + .jar_image {
-        opacity: .9;
+        opacity: .7;
     }
 
     .dynamic, .static {
