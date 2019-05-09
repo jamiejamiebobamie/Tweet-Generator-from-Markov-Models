@@ -219,7 +219,7 @@ if ("lovecraft" != on && lovecraftBool == true){
 // $( function() {
 // 		$( ".jar_image" ).mgGlitch({
 //           // set 'true' to stop the plugin
-// 				  destroy : false,
+// 		  destroy : false,
 //           // set 'false' to stop glitching
 //           glitch: true,
 //           // set 'false' to stop scaling
@@ -229,13 +229,13 @@ if ("lovecraft" != on && lovecraftBool == true){
 //           // select blend mode type
 //           blendModeType : 'hue',
 //           // set min time for glitch 1 elem
-//           glitch1TimeMin : 10,
+//           glitch1TimeMin : 200,
 //           // set max time for glitch 1 elem
-//           glitch1TimeMax : 50,
+//           glitch1TimeMax : 400,
 //           // set min time for glitch 2 elem
-//           glitch2TimeMin : 30,
+//           glitch2TimeMin : 10,
 //           // set max time for glitch 2 elem
-//           glitch2TimeMax : 50,
+//           glitch2TimeMax : 100,
 // 		});
 // });
 

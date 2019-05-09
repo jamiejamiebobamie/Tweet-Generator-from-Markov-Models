@@ -197,8 +197,8 @@ body{background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 140px;
-        left:720px;
+        top: 105px;
+        left:630px;
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 20px;
@@ -233,11 +233,10 @@ body{background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 70px;
-        left:355px;
+        top: 40px;
+        left:220px;
         margin-left:-150px;
         transform: rotate(.01deg);
-        border-radius: 10px;
     }
 
     .jar_image{
