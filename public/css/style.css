@@ -259,6 +259,61 @@ body{background-color: black;}
         opacity: .5;
     }
 
+    .github_button{
+        color: orange;
+        z-index:4;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 90px;
+        left:1685px;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
+
+    .github_image{
+        z-index:3;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: .1;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 120px;
+        left:1723px;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+        -webkit-transition: -webkit-transform 3s ease-in-out;
+        transition: transform 3s ease-in-out;
+}
+
+
+    .github_hud{
+        z-index:2;
+        animation: pulse 5s infinite;
+        position: absolute;
+        opacity: 1;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        float:left;
+        top: 80px;
+        left:1685px;
+        margin-left:-150px;
+        transform: rotate(.01deg);
+        border-radius: 10px;
+    }
+
+    .github_button:hover + .github_image {
+        opacity: .5;
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+
     .dynamic, .static {
         position: absolute;
         min-width: 100%;

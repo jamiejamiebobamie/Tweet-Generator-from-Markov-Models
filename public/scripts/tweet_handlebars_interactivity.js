@@ -11,6 +11,8 @@ const button_6 = document.getElementById("Shakespeare");
 const button_7 = document.getElementById("Lovecraft");
 const button_8 = document.getElementById("Tweet");
 
+const button_11 = document.getElementById("github");
+
 const button_10 = document.getElementById("jar");
 
 var titleElement = document.getElementById('title');
@@ -105,6 +107,10 @@ video.onended = function(e) {
     video.playbackRate = 1.3;
     video.loop = true;
 };
+
+button_11.addEventListener('click', function(e){
+    location.href='https://github.com/jamiejamiebobamie/tweet-gen-js';
+})
 
 
 // When the user clicks on <div>, open the popup
