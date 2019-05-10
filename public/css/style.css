@@ -1,7 +1,6 @@
 
 
-html {background-color: black;}
-body{background-color: black;}
+    html {background-color: black;}
 
     video:-webkit-media-controls-fullscreen-button{
         display: none;
@@ -219,32 +218,13 @@ body{background-color: black;}
 
         width: 73px;
         height: 71px;
-        background: url('/imgs/twitter_icon_sprite.png') left center;
+        background: url('/imgs/sprite_twitter_icon_39sprites_73by71tile.png') left center;
     }
 
     @keyframes fly{
       from{background-position-x:0px;}
       to{background-position-x:-2847px;}
     }
-
-/*
-    .bird_body{
-        z-index:4;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-
-        float:left;
-        top: 140px;
-        left:720px;
-        margin-left:-150px;
-    } */
-
-    /* .tweet_button:hover + .tweet_image + .bird_body{
-        opacity: 1;
-    } */
 
     .tweet_button:hover + .tweet_image{
         animation: fly 1s steps(39) infinite;
@@ -274,23 +254,23 @@ body{background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 63px;
-        left:345px;
+        top: 72px;
+        left:357px;
         margin-left:-150px;
         /* transform: rotate(.01deg); */
 
-        width: 150px;
-        height: 162px;
-        background: url('/imgs/jar_icon_sprite.png') left center;
+        width: 129px;
+        height: 130px;
+        background: url('/imgs/sprite_jar_icon_55sprites_129by130tile.png') left center;
     }
 
     @keyframes bob{
       from{background-position-x:0px;}
-      to{background-position-x:-21150px;}
+      to{background-position-x:-7106px;}
     }
 
     .jar_button:hover + .jar_image {
-        animation: bob 10s steps(141) infinite alternate-reverse;
+        animation: bob 5s steps(55) infinite alternate-reverse;
         opacity: 1;
     }
 
