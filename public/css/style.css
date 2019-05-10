@@ -275,14 +275,23 @@ body{background-color: black;}
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 70px;
-        left:355px;
+        top: 63px;
+        left:345px;
         margin-left:-150px;
-        transform: rotate(.01deg);
-        border-radius: 10px;
+        /* transform: rotate(.01deg); */
+
+        width: 150px;
+        height: 162px;
+        background: url('/imgs/jar_icon_sprite.png') left center;
+    }
+
+    @keyframes bob{
+      from{background-position-x:0px;}
+      to{background-position-x:-21150px;}
     }
 
     .jar_button:hover + .jar_image {
+        animation: bob 10s steps(141) infinite alternate-reverse;
         opacity: .5;
     }
 
