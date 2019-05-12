@@ -86,3 +86,5 @@ var status;
 
 
 app.listen(port);
+
+module.exports = app;

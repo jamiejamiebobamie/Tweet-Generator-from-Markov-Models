@@ -28,7 +28,8 @@
          appearance: none;
     }
 
-    .nav, .navbar, .container-fluid, .navbar-header, .nav_background{
+    .nav_background{
+        display: flex;
         color: transparent;
         background-color: transparent;
         z-index: 4;

@@ -5,11 +5,14 @@
   "main": "bundle.js",
   "dependencies": {
     "browserify-shim": "^3.8.14",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.0.0",
     "event-stream": "^3.3.4",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "file-system": "^2.2.2",
+    "mocha": "^6.1.4",
     "mongoose": "^5.3.14",
     "oauth": "^0.9.15",
     "save": "^2.3.2",
@@ -18,7 +21,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --exit test/*",
     "start": "node app.js"
   },
   "repository": {
