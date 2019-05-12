@@ -133,11 +133,11 @@ $(window).resize(function(){
 
     var videoHeight = $video.height(),
         windowHeight = $window.height(),
-    marginLeftAdjust =   (windowHeight - videoHeight) / 2;
+    marginRightAdjust =   (windowHeight - videoHeight) / 2;
 
     $video.css({
         'width': width,
-        'marginLeft' : marginLeftAdjust
+        'marginRight' : marginRightAdjust
     });
 }).resize();
 
