@@ -111,16 +111,32 @@ video.onended = function(e) {
 var $video  = $('video'),
     $window = $(window);
 
-$(window).resize(function(){
-    var height = $window.height();
-    $video.css('height', height);
+// Size dependent on height
+// $(window).resize(function(){
+//     var height = $window.height();
+//     $video.css('height', height);
+//
+//     var videoWidth = $video.width(),
+//         windowWidth = $window.width(),
+//     marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+//
+//     $video.css({
+//         'height': height,
+//         'marginLeft' : marginLeftAdjust
+//     });
+// }).resize();
 
-    var videoWidth = $video.width(),
-        windowWidth = $window.width(),
-    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+// Size dependent on width
+$(window).resize(function(){
+    var width = $window.width();
+    $video.css('width', width);
+
+    var videoHeight = $video.height(),
+        windowHeight = $window.height(),
+    marginLeftAdjust =   (windowHeight - videoHeight) / 2;
 
     $video.css({
-        'height': height,
+        'width': width,
         'marginLeft' : marginLeftAdjust
     });
 }).resize();
