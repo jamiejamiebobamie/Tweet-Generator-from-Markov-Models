@@ -134,7 +134,7 @@ function check(tweet){ //slows it down like crazy and all of the if statements d
 }}
 
 module.exports.run = function (notRandom){
-    let n = 7;
+    let n = 4;
     let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
     let file = files[notRandom]
 
@@ -148,9 +148,9 @@ module.exports.run = function (notRandom){
         let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
         let values = Object.keys(valuesDictionary) // array of keys of frequencies
         let frequentWords = []
-        if (values.length >= 7){// if there's 5 or more options, pick the most frequent words...
+        if (values.length >= 10){// if there's 10 or more options, pick the most frequent words...
             let i = 0;
-            while (i < 7){
+            while (i < 10){
                 // console.log(values, values[values.length-i-1], valuesDictionary[values[values.length-i-1]])
                 frequentWords = frequentWords.concat(valuesDictionary[values[values.length-i-1]])
                 // console.log(frequentWords)
@@ -176,7 +176,8 @@ module.exports.run = function (notRandom){
 }
 
 // function run(notRandom){
-// let n = 7;
+// let n = 4;
+// let options = 10;
 // let files = ["Grimm.md", "Poe.md", "Wilde.md", "Woolf.md", "Carroll.md", "Shakespeare.md", "Lovecraft.md"];
 // let file = files[notRandom]
 //
@@ -190,9 +191,9 @@ module.exports.run = function (notRandom){
 //     let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
 //     let values = Object.keys(valuesDictionary) // array of keys of frequencies
 //     let frequentWords = []
-//     if (values.length >= 7){// if there's 5 or more options, pick the most frequent words...
+//     if (values.length >= options){// if there's 5 or more options, pick the most frequent words...
 //         let i = 0;
-//         while (i < 7){
+//         while (i < options){
 //             // console.log(values, values[values.length-i-1], valuesDictionary[values[values.length-i-1]])
 //             frequentWords = frequentWords.concat(valuesDictionary[values[values.length-i-1]])
 //             // console.log(frequentWords)
@@ -214,4 +215,4 @@ module.exports.run = function (notRandom){
 // }
 //
 //
-// console.log(run(0))
+// console.log(run(3))
