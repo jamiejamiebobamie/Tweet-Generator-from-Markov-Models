@@ -4,6 +4,11 @@
 
     video:-webkit-media-controls-fullscreen-button{
         display: none;
+        object-fit: cover;
+    }
+
+    .video-container{
+        object-fit: cover;
     }
 
     h1 {
@@ -327,7 +332,7 @@
                 transform: rotate(360deg);
     }
 
-    .dynamic, .static {
+    /* .dynamic, .static {
         position: absolute;
         min-width: 100%;
         min-height: 100%;
@@ -337,7 +342,7 @@
         width: 100vw;
         height: 100vh;
         opacity: 1;
-    }
+    } */
 
     .dynamic{
         z-index: 1
