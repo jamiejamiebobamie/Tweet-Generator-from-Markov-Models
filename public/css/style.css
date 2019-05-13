@@ -332,7 +332,7 @@
             flex-direction: column;
         }
         .jar {
-          margin-right: 7vw;
+          margin-right: 9vw;
           margin-top: 360px;
         }
         .jar_image{
@@ -345,10 +345,11 @@
             transform: scale(2);
         }
         .github{
-          margin-top: 390px;
+          margin-right: 3vw;
+          margin-top: -750px;
         }
         .github_image{
-            transform: scale(1.5);
+            transform: scale(1.3);
         }
     }
 
