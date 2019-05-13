@@ -302,6 +302,22 @@
       }
     }
 
+    @media only screen and (max-device-width: 480px) {
+        .jar {
+          order: 3;
+          margin-right: 10vw;
+          margin-top: 260px
+        }
+        .tweet{
+          order: 2;
+          margin-top: 290px
+        }
+        .github{
+          order: 1;
+          margin-top: 290px
+        }
+}
+
     .dynamic, .static {
         position: absolute;
         min-width: 100%;
