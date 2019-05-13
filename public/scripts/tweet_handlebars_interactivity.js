@@ -272,6 +272,7 @@ if ("lovecraft" != on && lovecraftBool == true){
 // 		});
 // });
 
+
 function goHere(){
         // location.href='/tweet';
         // location.href='new_tweet/:msg';

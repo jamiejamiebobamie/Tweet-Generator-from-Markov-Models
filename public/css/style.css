@@ -1,6 +1,12 @@
 
 
-    html {background-color: black;}
+    html {
+        background-color: black;
+    }
+
+    body{
+        display: flex;
+    }
 
     video:-webkit-media-controls-fullscreen-button{
         display: none;
@@ -9,6 +15,7 @@
 
     .video-container{
         object-fit: cover;
+        margin-top: 300px;
     }
 
     h1 {
@@ -28,18 +35,26 @@
          appearance: none;
     }
 
-    .nav_background{
+    /* .nav_background{
         display: flex;
+        flex-direction: row;
         color: transparent;
         background-color: transparent;
-        z-index: 4;
+        z-index: 1;
         margin:  25px;
         border: 0px;
         border-color: transparent;
         width: 100%;
+        padding: 1vw;
     }
 
-    .hud{
+    .navbar-header{
+        z-index: 1;
+        color: blue;
+        background-color: red;
+    } */
+
+    /* .hud{
         z-index:2;
         animation: pulse 5s infinite;
         position: absolute;
@@ -47,13 +62,13 @@
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:right;
-        /* top: 10%; */
+        top: 10%;
         left:0%;
         margin-left:0px;
         transform: rotate(.01deg);
         border-radius: 20px;
-        /* -webkit-animation: myanim 2s infinite alternate-reverse; */
-    }
+        -webkit-animation: myanim 2s infinite alternate-reverse];
+    } */
 
     .popuptext{
         /* position: absolute; */
@@ -185,14 +200,20 @@
     @-webkit-keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: .9;}
-        z-index: 4
     }
 
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity:.9 ;}
-        z-index: 4
     }
+
+
+    .hud{
+        display: flex;
+        z-index: 2;
+        top: 7.5em;
+        left:30em;
+        }
 
     .tweet_button{
         z-index:5;
@@ -202,10 +223,9 @@
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 105px;
-        left:630px;
-        margin-left:-150px;
-        transform: rotate(.01deg);
+        margin-left:150px;
+        margin-top: 25px;
+
         border-radius: 20px;
     }
 
@@ -218,9 +238,14 @@
         transition-duration: 0.4s;
 
         float:left;
-        top: 140px;
-        left:720px;
-        margin-left:-150px;
+        /* top: 140px;
+        left:720px; */
+        margin-left:139px;
+        margin-top: 35px;
+        /* top: 7.5em;
+        left:30em; */
+        /* width: 129px;
+        height: 130px; */
 
         width: 73px;
         height: 71px;
@@ -233,7 +258,7 @@
     }
 
     .tweet_button:hover + .tweet_image{
-        animation: fly 1s steps(39) infinite;
+        animation: fly .8s steps(39) infinite;
         opacity: 1;
     }
 
@@ -246,27 +271,26 @@
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 40px;
-        left:220px;
-        margin-left:-150px;
-        transform: rotate(.01deg);
+        /* top: 3vw;
+        left:7vw; */
+        /* margin-left:-150px; */
     }
 
     .jar_image{
         z-index:3;
-        animation: pulse 5s infinite;
+        /* animation: pulse 5s infinite; */
         position: absolute;
         opacity: .1;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
+        /* -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s; */
         float:left;
-        top: 72px;
-        left:357px;
-        margin-left:-150px;
-        /* transform: rotate(.01deg); */
 
+        /* top: 3vw;
+        left:7vw; */
         width: 129px;
         height: 130px;
+
+        /* transform: scale(.5); */
         background: url('/imgs/sprite_jar_icon_55sprites_129by130tile.png') left center;
     }
 
@@ -289,15 +313,17 @@
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 90px;
-        left:1685px;
-        margin-left:-150px;
+
+        margin-left:230px;
+        margin-top: 22px;
+
+
         transform: rotate(.01deg);
         border-radius: 10px;
     }
 
 
-    .github_hud{
+    /* .github_hud{
         z-index:2;
         animation: pulse 5s infinite;
         position: absolute;
@@ -310,7 +336,7 @@
         margin-left:-150px;
         transform: rotate(.01deg);
         border-radius: 10px;
-    }
+    } */
 
     .github_image{
         z-index:3;
@@ -320,12 +346,11 @@
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         float:left;
-        top: 120px;
-        left:1723px;
-        margin-left:-150px;
+        margin-left:233px;
+        margin-top: 25px;
         -webkit-transition: -webkit-transform 3s ease-in-out;
         transition: transform 3s ease-in-out;
-}
+    }
 
     .github_button:hover + .github_image {
         opacity: 1;

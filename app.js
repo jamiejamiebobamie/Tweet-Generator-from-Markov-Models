@@ -84,7 +84,6 @@ var status;
 	res.redirect('https://twitter.com/writers_dead')
  });
 
-
 app.listen(port);
 
 module.exports = app;
