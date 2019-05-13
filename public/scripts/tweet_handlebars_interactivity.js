@@ -2,14 +2,14 @@
 var video = document.getElementById("myVideo");
 video.playbackRate = 1;
 
-const button_1 = document.getElementById("Grimm");
-const button_2 = document.getElementById("Poe");
-const button_3 = document.getElementById("Wilde");
-const button_4 = document.getElementById("Woolf");
-const button_5 = document.getElementById("Carroll");
-const button_6 = document.getElementById("Shakespeare");
-const button_7 = document.getElementById("Lovecraft");
-const button_8 = document.getElementById("Tweet");
+// const button_1 = document.getElementById("Grimm");
+// const button_2 = document.getElementById("Poe");
+// const button_3 = document.getElementById("Wilde");
+// const button_4 = document.getElementById("Woolf");
+// const button_5 = document.getElementById("Carroll");
+// const button_6 = document.getElementById("Shakespeare");
+// const button_7 = document.getElementById("Lovecraft");
+// const button_8 = document.getElementById("Tweet");
 
 const button_11 = document.getElementById("github");
 
@@ -40,59 +40,59 @@ var shakespearePop = document.getElementById("myPopup6")
 var lovecraftPop = document.getElementById("myPopup7")
 
 
-button_1.addEventListener('click', function(e){
-    video.setAttribute("src", clips[0]);
-    video.load();
-    video.playbackRate = 1.2;
-    video.loop = false;
-
-})
-
-button_2.addEventListener('click', function(e){
-    video.setAttribute("src", clips[1]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-})
-
-button_3.addEventListener('click', function(e){
-    video.setAttribute("src", clips[2]);
-    video.load();
-    video.playbackRate = 1.4;
-    video.loop = false;
-})
-
-button_4.addEventListener('click', function(e){
-    video.setAttribute("src", clips[3]);
-    video.load();
-    video.playbackRate = 1.5;
-    video.loop = false;
-})
-
-button_5.addEventListener('click', function(e){
-    video.setAttribute("src", clips[4]);
-    video.load();
-    video.playbackRate = 1.4;
-    video.loop = false;
-})
-
-button_6.addEventListener('click', function(e){
-    video.setAttribute("src", clips[5]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-})
-
-button_7.addEventListener('click', function(e){
-    video.setAttribute("src", clips[6]);
-    video.load();
-    video.playbackRate = 1.7;
-    video.loop = false;
-})
-
-button_8.addEventListener('click', function(e){
-    location.href='https://twitter.com/writers_dead';
-})
+// button_1.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[0]);
+//     video.load();
+//     video.playbackRate = 1.2;
+//     video.loop = false;
+//
+// })
+//
+// button_2.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[1]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+// })
+//
+// button_3.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[2]);
+//     video.load();
+//     video.playbackRate = 1.4;
+//     video.loop = false;
+// })
+//
+// button_4.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[3]);
+//     video.load();
+//     video.playbackRate = 1.5;
+//     video.loop = false;
+// })
+//
+// button_5.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[4]);
+//     video.load();
+//     video.playbackRate = 1.4;
+//     video.loop = false;
+// })
+//
+// button_6.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[5]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+// })
+//
+// button_7.addEventListener('click', function(e){
+//     video.setAttribute("src", clips[6]);
+//     video.load();
+//     video.playbackRate = 1.7;
+//     video.loop = false;
+// })
+//
+// button_8.addEventListener('click', function(e){
+//     location.href='https://twitter.com/writers_dead';
+// })
 
 button_10.addEventListener('click', function(e){
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
