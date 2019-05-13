@@ -315,6 +315,9 @@
           margin-right: 10vw;
           margin-top: 360px;
         }
+        .jar_image{
+            transform: scale(1.5);
+        }
         .tweet{
           margin-top: 390px;
         }
