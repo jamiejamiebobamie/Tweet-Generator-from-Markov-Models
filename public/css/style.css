@@ -1,5 +1,3 @@
-
-
     html {
         background-color: black;
     }
@@ -8,14 +6,19 @@
         display: flex;
     }
 
-    /* video:-webkit-media-controls-fullscreen-button{
+    video:-webkit-media-controls-fullscreen-button{
         display: none;
         object-fit: cover;
     }
 
     .video-container{
         object-fit: cover;
-    } */
+    }
+
+    .hud{
+        display: flex;
+        z-index: 2;
+    }
 
     h1 {
         animation: pulse 5s infinite;
@@ -45,22 +48,6 @@
         border-color: transparent;
         width: 100%;
     }
-
-    /* .hud{
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 1;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        float:right;
-        top: 10%;
-        left:0%;
-        margin-left:0px;
-        transform: rotate(.01deg);
-        border-radius: 20px;
-        -webkit-animation: myanim 2s infinite alternate-reverse];
-    } */
 
     .popuptext{
         /* position: absolute; */
@@ -198,12 +185,6 @@
         from {opacity: 0;}
         to {opacity:.9 ;}
     }
-
-
-    .hud{
-        display: flex;
-        z-index: 2;
-        }
 
     .tweet_button{
         z-index:5;
