@@ -298,7 +298,7 @@
                 transform: rotate(360deg);
     }
 
-    @media (max-width:700px) {
+    /* @media (max-width:700px) {
         .hud{
             display: flex;
             flex-direction: row;
@@ -322,9 +322,9 @@
         order: 1;
         margin-top: 290px
       }
-    }
+    } */
 
-    /* @media only screen and (max-device-width: 480px) {
+    @media only screen and (max-device-width: 480px) {
         .hud {
             float: right;
             margin-right: 100px;
@@ -349,7 +349,7 @@
         .github_image{
             transform: scale(1.5);
         }
-    } */
+    }
 
     /* @media only screen and (orientation:portrait) {
         .hud {
