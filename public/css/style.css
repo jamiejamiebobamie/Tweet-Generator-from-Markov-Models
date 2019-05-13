@@ -321,8 +321,14 @@
         .tweet{
           margin-top: 390px;
         }
+        .tweet_image{
+            transform: scale(1.5);
+        }
         .github{
           margin-top: 390px;
+        }
+        .github_image{
+            transform: scale(1.5);
         }
     }
 
