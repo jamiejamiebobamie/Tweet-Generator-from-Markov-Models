@@ -299,6 +299,16 @@
     }
 
     @media (max-width:700px) {
+        .hud{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 3;
+            padding: 3vw;
+            margin-left: -10vw;
+        }
+
       .jar {
         order: 3;
         margin-right: 10vw;
@@ -341,7 +351,7 @@
         }
     } */
 
-    @media only screen and (orientation:portrait) {
+    /* @media only screen and (orientation:portrait) {
         .hud {
             float: right;
             margin-right: 100px;
@@ -366,7 +376,8 @@
         .github_image{
             transform: scale(1.5);
         }
-    }
+    } */
+
     @media only screen and (orientation:landscape) {
         .tweet{
           order: 3;
