@@ -28,7 +28,7 @@
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         size: 10px;
         opacity: 1;
-        /* font-size: 1vw; */
+        font-size: 1vw;
     }
 
     input[type="button"]{
