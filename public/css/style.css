@@ -8,14 +8,14 @@
         display: flex;
     }
 
-    video:-webkit-media-controls-fullscreen-button{
+    /* video:-webkit-media-controls-fullscreen-button{
         display: none;
         object-fit: cover;
     }
 
     .video-container{
         object-fit: cover;
-    }
+    } */
 
     h1 {
         animation: pulse 5s infinite;
