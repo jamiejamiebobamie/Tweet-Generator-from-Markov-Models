@@ -5,10 +5,12 @@
     video:-webkit-media-controls-fullscreen-button{
         display: none;
         object-fit: cover;
+        background-color: black;
     }
 
     .video-container{
         object-fit: cover;
+        background-color: black;
     }
 
     .hud{
@@ -331,6 +333,7 @@
         width: 100vw;
         height: 100vh;
         opacity: 1;
+        background-color: black;
     }
 
     .dynamic{
