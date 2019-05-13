@@ -15,6 +15,7 @@
 
     .hud{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
         z-index: 3;
@@ -310,22 +311,15 @@
             margin-right: 100px;
             flex-direction: column;
         }
-        /* .jar {
-          order: 3;
-          margin-right: 10vw;
-          margin-top: 460px;
-          transform: scale(1.5);
+        .jar {
+          margin-top: 360px;
         }
         .tweet{
-          order: 2;
-          margin-top: 490px;
-          transform: scale(1.5);
+          margin-top: 390px;
         }
         .github{
-          order: 1;
-          margin-top: 490px;
-          transform: scale(1.5);
-        } */
+          margin-top: 390px;
+        }
     }
 
     .dynamic, .static {
