@@ -298,33 +298,34 @@
                 transform: rotate(360deg);
     }
 
-    /* @media (max-width:700px) {
-        .hud{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 3;
-            padding: 3vw;
-            margin-left: -10vw;
+    /* @media only screen and (max-device-width: 480px) {
+        .hud {
+            float: right;
+            margin-right: 100px;
+            flex-direction: column;
         }
-
-      .jar {
-        order: 3;
-        margin-right: 10vw;
-        margin-top: 260px
-      }
-      .tweet{
-        order: 2;
-        margin-top: 290px
-      }
-      .github{
-        order: 1;
-        margin-top: 290px
-      }
+        .jar {
+          margin-right: 7vw;
+          margin-top: 360px;
+        }
+        .jar_image{
+            transform: scale(1.5);
+        }
+        .tweet{
+          margin-top: 390px;
+        }
+        .tweet_image{
+            transform: scale(2);
+        }
+        .github{
+          margin-top: 390px;
+        }
+        .github_image{
+            transform: scale(1.5);
+        }
     } */
 
-    @media only screen and (max-device-width: 480px) {
+    @media only screen and (orientation:portrait) {
         .hud {
             float: right;
             margin-right: 100px;
@@ -351,33 +352,6 @@
         }
     }
 
-    /* @media only screen and (orientation:portrait) {
-        .hud {
-            float: right;
-            margin-right: 100px;
-            flex-direction: column;
-        }
-        .jar {
-          margin-right: 7vw;
-          margin-top: 360px;
-        }
-        .jar_image{
-            transform: scale(1.5);
-        }
-        .tweet{
-          margin-top: 390px;
-        }
-        .tweet_image{
-            transform: scale(2);
-        }
-        .github{
-          margin-top: 390px;
-        }
-        .github_image{
-            transform: scale(1.5);
-        }
-    } */
-
     @media only screen and (orientation:landscape) {
         .tweet{
           order: 3;
@@ -385,6 +359,32 @@
         .github{
           order: 2;
         }
+    }
+
+    @media (max-width:500px) {
+        .hud{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 3;
+            padding: 3vw;
+            margin-left: -10vw;
+        }
+
+      .jar {
+        order: 3;
+        margin-right: 10vw;
+        margin-top: 260px
+      }
+      .tweet{
+        order: 2;
+        margin-top: 290px
+      }
+      .github{
+        order: 1;
+        margin-top: 290px
+      }
     }
 
     .dynamic, .static {
