@@ -305,6 +305,9 @@
     }
 
     @media only screen and (max-device-width: 480px) {
+        .hud {
+            flex-direction: column;
+        }
         .jar {
           order: 3;
           margin-right: 10vw;
