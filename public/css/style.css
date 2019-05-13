@@ -306,17 +306,17 @@
         .jar {
           order: 3;
           margin-right: 10vw;
-          margin-top: 310px
+          margin-top: 360px
         }
         .tweet{
           order: 2;
-          margin-top: 340px
+          margin-top: 390px
         }
         .github{
           order: 1;
-          margin-top: 340px
+          margin-top: 390px
         }
-}
+    }
 
     .dynamic, .static {
         position: absolute;
