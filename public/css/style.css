@@ -25,7 +25,7 @@
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         size: 10px;
         opacity: 1;
-        font-size: 1vw;
+        /* font-size: 1vw; */
     }
 
     input[type="button"]{
@@ -34,24 +34,17 @@
          appearance: none;
     }
 
-    /* .nav_background{
+    .nav_background{
         display: flex;
         flex-direction: row;
         color: transparent;
         background-color: transparent;
-        z-index: 1;
+        z-index: 3;
         margin:  25px;
         border: 0px;
         border-color: transparent;
         width: 100%;
-        padding: 1vw;
     }
-
-    .navbar-header{
-        z-index: 1;
-        color: blue;
-        background-color: red;
-    } */
 
     /* .hud{
         z-index:2;
@@ -210,18 +203,12 @@
     .hud{
         display: flex;
         z-index: 2;
-        top: 7.5em;
-        left:30em;
         }
 
     .tweet_button{
         z-index:5;
-        animation: pulse 5s infinite;
         position: absolute;
         opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        float:left;
         margin-left:150px;
         margin-top: 25px;
 
@@ -230,20 +217,10 @@
 
     .tweet_image{
         z-index:3;
-        animation: pulse 5s infinite;
         position: absolute;
         opacity: .1;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-
-        float:left;
         margin-left:139px;
         margin-top: 35px;
-        /* top: 7.5em;
-        left:30em; */
-        /* width: 129px;
-        height: 130px; */
-
         width: 73px;
         height: 71px;
         background: url('/imgs/sprite_twitter_icon_39sprites_73by71tile.png') left center;
@@ -260,30 +237,16 @@
     }
 
     .jar_button{
-        color: orange;
         z-index:4;
-        animation: pulse 5s infinite;
         position: absolute;
         opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        float:left;
-        /* top: 3vw;
-        left:7vw; */
-        /* margin-left:-150px; */
     }
 
     .jar_image{
         z-index:3;
-        /* animation: pulse 5s infinite; */
         position: absolute;
         opacity: .1;
-        /* -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s; */
         float:left;
-
-        /* top: 3vw;
-        left:7vw; */
         width: 129px;
         height: 130px;
 
@@ -313,10 +276,6 @@
 
         margin-left:230px;
         margin-top: 22px;
-
-
-        transform: rotate(.01deg);
-        border-radius: 10px;
     }
 
 
@@ -469,7 +428,6 @@
         transform: rotate(.01deg);
         border-radius: 10px;
     }
-
 
 .sprite_test{
     position:absolute;
