@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        z-index: 2;
+        z-index: 3;
         padding: 3vw;
         margin-left: -10vw;
     }
@@ -306,23 +306,25 @@
 
     @media only screen and (max-device-width: 480px) {
         .hud {
+            float: right;
+            margin-right: 100px;
             flex-direction: column;
         }
         .jar {
           order: 3;
           margin-right: 10vw;
           margin-top: 460px;
-          transform: scale(1.5);
+          /* transform: scale(1.5); */
         }
         .tweet{
           order: 2;
           margin-top: 490px;
-          transform: scale(1.5);
+          /* transform: scale(1.5); */
         }
         .github{
           order: 1;
           margin-top: 490px;
-          transform: scale(1.5);
+          /* transform: scale(1.5); */
         }
     }
 
