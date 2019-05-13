@@ -205,6 +205,11 @@
         width: 129px;
         height: 130px;
 
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -webkit-transition: -webkit-transform 3s ease-in-out;
+        transition: transform 3s ease-in-out;
+
         /* transform: scale(.5); */
         background: url('/imgs/sprite_jar_icon_55sprites_129by130tile.png') left center;
     }
@@ -241,6 +246,10 @@
         margin-top: 25px;
         width: 73px;
         height: 71px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -webkit-transition: -webkit-transform 3s ease-in-out;
+        transition: transform 3s ease-in-out;
         transform: scale(1.5);
         background: url('/imgs/sprite_twitter_icon_39sprites_73by71tile.png') left center;
     }
@@ -276,7 +285,7 @@
         margin-top: 15px;
         transform: scale(1.1);
 
-        animation: pulse 5s infinite;
+        /* animation: pulse 5s infinite; */
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         -webkit-transition: -webkit-transform 3s ease-in-out;
@@ -358,7 +367,14 @@
             transform: scale(1.5);
         }
     }
-    @media screen and (orientation:landscape) { … }
+    @media screen and (orientation:landscape) {
+        .tweet{
+          order: 3;
+        }
+        .github{
+          order: 2;
+        }
+    }
 
     .dynamic, .static {
         position: absolute;
