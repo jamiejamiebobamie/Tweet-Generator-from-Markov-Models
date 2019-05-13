@@ -341,7 +341,7 @@
         }
     } */
 
-    @media screen and (orientation:portrait) {
+    @media only screen and (orientation:portrait) {
         .hud {
             float: right;
             margin-right: 100px;
@@ -367,7 +367,7 @@
             transform: scale(1.5);
         }
     }
-    @media screen and (orientation:landscape) {
+    @media only screen and (orientation:landscape) {
         .tweet{
           order: 3;
         }
