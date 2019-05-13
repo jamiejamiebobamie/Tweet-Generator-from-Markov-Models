@@ -312,9 +312,12 @@
             flex-direction: column;
         }
         .jar {
+          margin-right: 10vw;
           margin-top: 360px;
+          transform: scale(1.5);
         }
         .tweet{
+          transform: scale(1.2);
           margin-top: 390px;
         }
         .github{
