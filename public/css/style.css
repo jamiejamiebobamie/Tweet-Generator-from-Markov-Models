@@ -231,7 +231,7 @@
     .tweet_button{
         z-index:5;
         position: absolute;
-        opacity: 0;
+        opacity: .5;
         margin-top: 17px;
         margin-left: -10px;
         border-radius: 20px;
