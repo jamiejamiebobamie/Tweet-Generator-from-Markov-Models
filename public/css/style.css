@@ -309,17 +309,17 @@
           order: 3;
           margin-right: 10vw;
           margin-top: 460px;
-          transform: scale(3);
+          transform: scale(1.5);
         }
         .tweet{
           order: 2;
           margin-top: 490px;
-          transform: scale(3);
+          transform: scale(1.5);
         }
         .github{
           order: 1;
           margin-top: 490px;
-          transform: scale(3);
+          transform: scale(1.5);
         }
     }
 
