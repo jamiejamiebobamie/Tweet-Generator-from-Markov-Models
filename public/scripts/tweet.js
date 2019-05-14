@@ -166,13 +166,14 @@ module.exports.run = function (notRandom){
         tweet = tweet + " " + word
     }
 
+    tweet += "."
     let author = file.slice(0, -3)
-    if (tweet[tweet.length-1]!="."){
-    tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + "." + " -" + myAuthors[author];
-} else {
-    tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + " -" + myAuthors[author];
-}
-    return tweet
+//     if (tweet[tweet.length-1]!="."){
+//     tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + "." + " -" + myAuthors[author];
+// } else {
+//     tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + " -" + myAuthors[author];
+// }
+    return [tweet, myAuthors[author], notRandom]
 }
 
 // function run(notRandom){

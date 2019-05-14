@@ -49,18 +49,30 @@ var tweet_Shakespeare;
 var tweet_Lovecraft;
 
 var status;
-
+	 let tweets = []
  app.get('/', (req, res) => {
+	 let count = 0
+	 while (count < 25){
+		let msg;
+     // tweet_Grimm = generator.run(0);
+     // tweet_Poe = generator.run(1);
+     // tweet_Wilde = generator.run(2);
+     // tweet_Woolf = generator.run(3);
+     // tweet_Carroll = generator.run(4);
+     // tweet_Shakespeare = generator.run(5);
+     // tweet_Lovecraft = generator.run(6);
+	 tweet = generator.run( Math.floor( Math.random() * Math.floor(6)))
+	 console.log(tweet)
+	 msg = {
+		 body: tweet[0],
+		 author: tweet[1],
+		 number: tweet[2]
+	 }
+	 tweets.push(msg)
+	 count+=1
+ }
 
-     tweet_Grimm = generator.run(0);
-     tweet_Poe = generator.run(1);
-     tweet_Wilde = generator.run(2);
-     tweet_Woolf = generator.run(3);
-     tweet_Carroll = generator.run(4);
-     tweet_Shakespeare = generator.run(5);
-     tweet_Lovecraft = generator.run(6);
-
-     res.render('tweet', { msg1: tweet_Grimm, msg2: tweet_Poe, msg3: tweet_Wilde, msg4: tweet_Woolf, msg5: tweet_Carroll, msg6: tweet_Shakespeare, msg7: tweet_Lovecraft});
+     res.render('tweet', { tweets: tweets});
  });
 
  app.get('/new_tweet/:msg', (req, res) => {

@@ -21,175 +21,49 @@
         z-index: 3;
         padding: 3vw;
         margin-left: -10vw;
+        background-color: black;
     }
 
-    h1 {
-        animation: pulse 5s infinite;
+    .slideshow-container {
+        z-index: 15;
+        max-width: 2000px;
+        position: relative;
+        margin: auto;
+        padding: 7vw;
+        /* margin-left: -400px; */
+        margin-top: 75px;
+    }
+
+    .myslides{
+        display: flex;
+        flex-flow: column;
+    }
+
+    p {
         color: #ff9a00;
         position: absolute;
-        z-index: 10;
+        z-index: 15;
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        size: 10px;
         opacity: 1;
-        font-size: 1vw;
+        font-size: 3vw;
+        /* top: 50%;
+        left: 50%;
+         z-index: 15;*/
+        margin-left: -5vw;
+        /* margin-top: -5vw; */
     }
 
-    input[type="button"]{
-         -moz-appearance: none;
-         -webkit-appearance: none;
-         appearance: none;
-    }
-
-    /* .nav_background{
-        color: transparent;
-        background-color: transparent;
-        z-index: 3;
-        margin:  25px;
-        border: 0px;
-        border-color: transparent;
-        width: 100%;
-    } */
-
-    .popuptext{
-        /* position: absolute; */
-        opacity: 0;
+    .author {
         color: #ff9a00;
-         font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    }
-
-    /* Popup container */
-    .popup1, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7 {
         position: absolute;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 4;
-        top: 460px;
-        left:190px;
-    }
-
-    /* The actual popup (appears on top) */
-    .popup1, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7, .popuptext {
-        visibility: hidden;
-        width: 900px;
-        opacity: 0.9;
-        text-align: left;
-        border-radius: 6px;
-        padding: 9px 0;
-        position: absolute;
-        bottom: 125%;
-        z-index: 4;
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        font-size: 30px;
+        opacity: 1;
+        font-size: 3vw;
+        /* top: 50%;
+        left: 50%; */
+        margin-left: 50vw;
+        margin-top: 30vw;
     }
-
-    /* Toggle this class when clicking on the popup container (hide and show the popup) */
-    .popup1, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7, .show {
-        visibility: visible;
-        animation-delay: 2s;
-        -webkit-animation: fadeIn 3s;
-        animation: fadeIn 3s;
-        z-index: 4;
-    }
-
-    /* Popup arrow */
-    /* All of these are teh same, but they are all required for it function properly. */
-    .popup1 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup2 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup3 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup4 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup5 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup6 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    .popup7 .popuptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        z-index: 4
-    }
-
-    @-webkit-keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: .9;}
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity:.9 ;}
-    }
-
-    /* .jar, .tweet, .github{
-
-    } */
 
     .jar_button{
         z-index:4;
@@ -222,10 +96,6 @@
     .jar_button:hover + .jar_image {
         animation: bob 5s steps(55) infinite alternate-reverse;
         opacity: 1;
-    }
-
-    .tweet{
-        /* margin: 45px; */
     }
 
     .tweet_button{
@@ -272,10 +142,6 @@
         opacity: 0;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        /* float:left; */
-
-        /* margin-left:230px;
-        margin-top: 22px; */
     }
 
     .github_image{
@@ -283,9 +149,6 @@
         position: absolute;
         opacity: .1;
         margin-top: 15px;
-        transform: scale(1.1);
-
-        /* animation: pulse 5s infinite; */
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         -webkit-transition: -webkit-transform 3s ease-in-out;
@@ -404,105 +267,6 @@
 
     .dynamic{
         z-index: 1
-    }
-
-    .Grimm{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 600px;
-        left:232px;
-        transform: rotate(5deg);
-        border-radius: 10px;
-    }
-
-    .Poe{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 680px;
-        left:470px;
-        transform: rotate(3deg);
-        border-radius: 10px;
-    }
-
-    .Wilde{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 617px;
-        left:621px;
-        transform: rotate(1deg);
-        border-radius: 10px;
-    }
-
-    .Woolf{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 688px;
-        left:713px;
-        transform: rotate(1deg);
-        border-radius: 10px;
-    }
-
-    .Carroll{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 690px;
-        left:841px;
-        transform: rotate(1deg);
-        border-radius: 10px;
-    }
-
-    .Shakespeare{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        float:left;
-        top: 570px;
-        left:1100px;
-        margin-left:-150px;
-        border-radius: 10px;
-    }
-
-    .Lovecraft{
-        background: orange;
-        z-index:2;
-        animation: pulse 5s infinite;
-        position: absolute;
-        opacity: 0;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        top: 650px;
-        left:1060px;
-        transform: rotate(.01deg);
-        border-radius: 10px;
     }
 
 .sprite_test{
