@@ -1,6 +1,9 @@
 var video = document.getElementById("myVideo");
 video.playbackRate = 1;
 
+let firstTweetGenerated = false;
+let tweetThis = false;
+
 const button_9 = document.getElementById("Tweet");
 const button_10 = document.getElementById("Jar");
 const button_11 = document.getElementById("Github");
@@ -71,6 +74,31 @@ button_11.addEventListener('click', function(e){
 
 var $video  = $('video'),
     $window = $(window);
+
+// if (firstTweetGenerated){
+//
+//
+//     // someElement.classList.add('notransition'); // Disable transitions
+//     // doWhateverCssChangesYouWant(someElement);
+//     // someElement.offsetHeight; // Trigger a reflow, flushing the CSS changes
+//     // someElement.classList.remove('notransition'); // Re-enable transitions
+//     // Code for Chrome, Safari, and Opera
+// document.getElementById("tweet_image").style.WebkitAnimationPlayState = "paused";
+//
+// // Standard syntax
+// document.getElementById("tweet_image").style.animationPlayState = "paused";
+//
+// } else{
+//
+//
+// // Code for Chrome, Safari, and Opera
+// document.getElementById("tweet_image").style.WebkitAnimationPlayState = "paused";
+//
+// // Standard syntax
+// document.getElementById("tweet_image").style.animationPlayState = "paused";
+//
+// }
+
 
 // Size dependent on height
 // $(window).resize(function(){
