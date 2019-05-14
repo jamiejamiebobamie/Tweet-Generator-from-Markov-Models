@@ -39,17 +39,16 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-// var c = document.slides[slideIndex].children
-
 button_9.addEventListener('click', function(e){
-    location.href='https://twitter.com/writers_dead';
+    tweet = slides[slideIndex-1].children[0].innerHTML
+    author = slides[slideIndex-1].children[1].innerHTML
+    location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
 })
 
 button_10.addEventListener('click', function(e){
     if (slideIndex+1 > slides.length) {slideIndex = 1};
     let number = slides[slideIndex+1].children[2].innerHTML;
     console.log(number)
-    // let number = 0;
     storeSlideIndex = slideIndex;
     setEmptySlide();
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
