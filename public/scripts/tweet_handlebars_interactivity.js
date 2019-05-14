@@ -1,3 +1,5 @@
+// screen.orientation.lock('landscape');
+
 var video = document.getElementById("myVideo");
 video.playbackRate = 1;
 
