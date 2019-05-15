@@ -1,5 +1,9 @@
 // screen.orientation.lock('landscape');
 
+var orientation = window.screen.orientation;
+
+console.log(orientation, window.matchMedia("(orientation: portrait)").matches, window.matchMedia("(orientation: landscape)").matches)
+
 var video = document.getElementById("myVideo");
 video.playbackRate = 1;
 
@@ -109,22 +113,22 @@ var $video  = $('video'),
 //
 // }
 
-
+if (window.matchMedia("(orientation: portrait)").matches){
 // Size dependent on height
-// $(window).resize(function(){
-//     var height = $window.height();
-//     $video.css('height', height);
-//
-//     var videoWidth = $video.width(),
-//         windowWidth = $window.width(),
-//     marginLeftAdjust =   (windowWidth - videoWidth) / 2;
-//
-//     $video.css({
-//         'height': height,
-//         'marginLeft' : marginLeftAdjust
-//     });
-// }).resize();
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
 
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+    $video.css({
+        'height': height,
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+} else {
 // Size dependent on width
 $(window).resize(function(){
     var width = $window.width();
@@ -140,7 +144,7 @@ $(window).resize(function(){
     });
 }).resize();
 
-
+}
 // $( function() {
 // 		$( ".glitch" ).mgGlitch({
 //           // set 'true' to stop the plugin
