@@ -267,6 +267,12 @@
     } */
 
     @media only screen and (orientation:portrait) {
+        .slideshow-container {margin-top: 100px;}
+        .author{
+            margin-top: 33vw;
+            margin-right: -10vw;
+
+        }
         .hud {
             /* float: right; */
             position: absolute;
