@@ -1,6 +1,7 @@
-Dead Writer Tweet Generator
 
 ![alt text](./public/imgs/icon_jar.png)
+
+Dead Writer Tweet Generator
 
 This a web app that generates new text from the works of dead writers. There are currently 7 dead authors on the site:
 
