@@ -1,10 +1,14 @@
+
+// npm module for reading files.
 const fs = require("fs");
 
+// a function for choosing a random corpus.
 function chooseRandomFile(){
     let files = ["Wilde.md", "Shakespeare.md", "Grimm.md", "Carroll.md", "Lovecraft.md", "Woolf.md", "Poe.md"];
     return files[Math.floor(Math.random() * Math.floor(files.length))];
 }
 
+// a function to turn the words in a file into an array.
 function fileToArray(file){
     file = __dirname + "/corpi/" + file
     var text = fs.readFileSync(file).toString('utf-8');
@@ -12,23 +16,28 @@ function fileToArray(file){
     return words
 }
 
+// For testing purposes.
+
 // function fileToArray(file){
-//     //for testing...
 //     file = "/Users/jamesmccrory/Documents/dev/tweet-gen-js/public/scripts/corpi/" + file
 //     let text = fs.readFileSync(file).toString('utf-8');
 //     let words = text.split(" ")
 //     return words
 // }
 
+
+// takes in an array turns the items in the array into a string.
  function arrayToString(array){
      let string = ""
      for (let i = 0; i < array.length; i++) {
-         string += array[i].toString('utf-8') + " "}
+         string +=  " " + array[i].toString('utf-8')}
      return string;
 }
 
 function wordBeforeAfter(array, word, n) {
-// Takes in an array of words in order from a text, a target word, and an integer of how many words to look before the target
+// Takes in an array of words from a text,
+// a target word, and an integer of how many words to look before the target
+// returns an array of 'instances.' See below.
    let instances = []
    for (let i = 0; i < array.length; i++) {
        if (array[i] == word){
@@ -51,6 +60,7 @@ function wordBeforeAfter(array, word, n) {
     return instances
 }
 
+// takes in an array of instances and builds a dictionary of next words and their frequencies for a given word.
 function nextWords(instances) {
     let next = {};
     for (let i = 0; i < instances.length; i++) {
@@ -63,15 +73,8 @@ function nextWords(instances) {
     return next
 };
 
-function pickRand(nexts){
-    var rand = Math.floor(Math.random() * Math.floor(nexts[1]));
-    if (rand != 0){
-        return rand;
-    } else {
-        return 1;
-    }
-}
-
+// takes in a dictionary of next words and their frequencies for a given word
+// and creates a dictionary where frquencies are the keys and the values are words with that frequency.
 function valuestoKeys(nexts){
     var newDict = {}
     var arrKeys = Object.keys(nexts)
@@ -83,12 +86,13 @@ function valuestoKeys(nexts){
         newDict[arrValues[i]] = [arrKeys[i]]
     }
     }
-    // console.log(newDict)
     return newDict
 }
 
+// Unused need to implement.
 var punc = [".", "!", "?", ";", ","]
 
+// A lookup table for an author's fullname / pen-name.
 var myAuthors = {
     "Poe": "Edgar Allan Poe",
     "Lovecraft": "HP Lovecraft",
@@ -99,39 +103,13 @@ var myAuthors = {
     "Grimm": "The Brothers Grimm",
 }
 
-function check(tweet){ //slows it down like crazy and all of the if statements don't work properly...
-    var even = false;
-    var count = 0;
+// Takes in a number associated with an author.
+// (0 to 6. Left to right in the order of jars as they appear on the site.)
+// Generates a tweet based their corpus using the functions above.
 
-    for (var i=0; i < (tweet.length); i++) {
-
-        if (i == 0 && tweet[i] == " ") {
-            tweet = tweet.substring(1, tweet.length);
-        }
-
-        if (tweet[i] == "\"") {
-            count++;
-        }
-        if (tweet.substring(tweet.length-3, tweet.length-1) == "and") {
-            tweet = tweet + "...";
-        }
-        if (i == (tweet.length-1) && tweet[i] == ",") {
-                tweet = tweet.substring(0, tweet.length-1);
-                // console.log(tweet[i])
-        } else if (i == (tweet.length-1) && punc.includes(tweet[i])) {
-            tweet = tweet;
-        } else {
-            tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1);
-            tweet = tweet + ".";
-        }
-
-    if (count%2 != 0 && count != 0) {
-        even = true;
-    } else {
-        even = false;
-    }
-    return [tweet, even]
-}}
+// NOTE TO FUTURE ME :
+// Consider pushing to an array as the tweet is being built
+// instead of concantenating to a string.
 
 module.exports.run = function (notRandom){
     let n = 4;
@@ -140,9 +118,11 @@ module.exports.run = function (notRandom){
 
     let fileArray = fileToArray(file);
     let word = fileArray[Math.floor(Math.random() * Math.floor(fileArray.length))]
-    let tweet = word
+    let tweet = word.charAt(0).toUpperCase() + word.slice(1)
+    let tweetArray = []
 
-    while (tweet.length < 110) {
+    // while (tweet.length < 110) {
+    while (tweetArray.length < 20) {
         let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
         let nexts = nextWords(arrayOfInstances); // next words
         let valuesDictionary = valuestoKeys(nexts); // dictionary of key: frequencies and value: arrays of words
@@ -163,18 +143,17 @@ module.exports.run = function (notRandom){
             let random_index_into_values = Math.floor(Math.random() * Math.floor(values.length)); // random index out of the array of keys of frequencies
             word = valuesDictionary[values[random_index_into_values]][Math.floor(Math.random() * Math.floor(valuesDictionary[values[random_index_into_values]].length - 1))] // random index out of the array of words for frequency 'v'
         }
-        tweet = tweet + " " + word
+        tweetArray.push(word)
+        // tweet = tweet + " " + word
     }
 
-    tweet += "."
+    tweet += arrayToString(tweetArray) + "."
+    // tweet += "."
     let author = file.slice(0, -3)
-//     if (tweet[tweet.length-1]!="."){
-//     tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + "." + " -" + myAuthors[author];
-// } else {
-//     tweet = tweet.charAt(0).toUpperCase() + tweet.slice(1) + " -" + myAuthors[author];
-// }
     return [tweet, myAuthors[author], notRandom]
 }
+
+// Used for testing purposes.
 
 // function run(notRandom){
 // let n = 4;

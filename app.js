@@ -1,20 +1,25 @@
+// initializing npm module: dotenv
 const dotenv = require('dotenv').config();
 
+// initializing express
 const express = require('express')
 const app = express()
 
-var Twitter = require('twitter');
-var config = require('./public/scripts/config.js');
-var T = new Twitter(config);
+// initializing Twitter API
+let Twitter = require('twitter');
+let config = require('./public/scripts/config.js');
+let T = new Twitter(config);
 
-var OAuth = require('oauth');
+// OAuth for the Twitter API
+let OAuth = require('oauth');
 
-var twitter_application_consumer_key = process.env.TWITTER_KEY
-var twitter_application_secret = process.env.TWITTER_SECRET
-var twitter_user_access_token = process.env.TWITTER_ACCESS_TOKEN
-var twitter_user_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
+// .env secrets and api keys
+let twitter_application_consumer_key = process.env.TWITTER_KEY
+let twitter_application_secret = process.env.TWITTER_SECRET
+let twitter_user_access_token = process.env.TWITTER_ACCESS_TOKEN
+let twitter_user_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
 
-var oauth = new OAuth.OAuth(
+let oauth = new OAuth.OAuth(
 	'https://api.twitter.com/oauth/request_token',
 	'https://api.twitter.com/oauth/access_token',
 	twitter_application_consumer_key,
@@ -24,59 +29,44 @@ var oauth = new OAuth.OAuth(
 	'HMAC-SHA1'
 );
 
+// creating an entry point / reference to my public folder with media files.
 app.use(express.static('public'));
 
-var exphbs = require('express-handlebars');
-
+// initializing handlebars
+let exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-var mongoose = require('mongoose');
+// initializing mongoose.
+// NOT IMPLEMENTED: meant to track user count / traffic to my site.
+let mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
 
-const fs = require("fs");
-
+// Exported tweet generator from tweet.js
 const generator = require('./public/scripts/tweet.js');
 
+// initializing port
 const port = process.env.PORT || 13000;
 
-var tweet_Grimm;
-var tweet_Poe;
-var tweet_Wilde;
-var tweet_Woolf;
-var tweet_Carroll;
-var tweet_Shakespeare;
-var tweet_Lovecraft;
-
-var status;
+// GET route of the index page. generates the tweets and sends them to the views.
+app.get('/', (req, res) => {
 	 let tweets = []
- app.get('/', (req, res) => {
 	 let count = 0
-	 while (count < 10){
-		let msg;
-     // tweet_Grimm = generator.run(0);
-     // tweet_Poe = generator.run(1);
-     // tweet_Wilde = generator.run(2);
-     // tweet_Woolf = generator.run(3);
-     // tweet_Carroll = generator.run(4);
-     // tweet_Shakespeare = generator.run(5);
-     // tweet_Lovecraft = generator.run(6);
-	 tweet = generator.run( Math.floor( Math.random() * Math.floor(6)))
-	 console.log(tweet)
-	 msg = {
-		 body: tweet[0],
-		 author: tweet[1],
-		 number: tweet[2]
-	 }
-	 tweets.push(msg)
-	 count+=1
- }
-
-     res.render('tweet', { tweets: tweets});
+	 while (count < 30){
+	 	tweet = generator.run( Math.floor( Math.random() * Math.floor(6)))
+		let msg = {
+			 body: tweet[0],
+			 author: tweet[1],
+			 number: tweet[2] }
+	 	 tweets.push(msg)
+	 	 count+=1
+ 	}
+    res.render('tweet', { tweets: tweets});
  });
 
+// POST route wrapped in a GET route that tweets the displayed ('msg').
  app.get('/new_tweet/:msg', (req, res) => {
-	 status = req.params.msg
+	 let status = req.params.msg
 
 	 // ------------ https://gist.github.com/jaredpalmer/138f17a142d2d8770a1d752b0e00bd31
 	 var postBody = {
@@ -96,6 +86,8 @@ var status;
 	res.redirect('https://twitter.com/writers_dead')
  });
 
+// Listen on the port.
 app.listen(port);
 
+// Export the app for mocha tests.
 module.exports = app;

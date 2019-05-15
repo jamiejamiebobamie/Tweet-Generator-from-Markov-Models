@@ -2,49 +2,6 @@
         background-color: black;
     }
 
-
-
-    /* #container { display:block; }
-
-    @media only screen and (orientation:portrait){
-
-      #container {
-
-        height: 100vw;
-
-        -webkit-transform: rotate(90deg);
-
-        -moz-transform: rotate(90deg);
-
-        -o-transform: rotate(90deg);
-
-        -ms-transform: rotate(90deg);
-
-        transform: rotate(90deg);
-
-      }
-
-    }
-
-    @media only screen and (orientation:landscape){
-
-      #container {
-
-         -webkit-transform: rotate(0deg);
-
-         -moz-transform: rotate(0deg);
-
-         -o-transform: rotate(0deg);
-
-         -ms-transform: rotate(0deg);
-
-         transform: rotate(0deg);
-
-      }
-
-    } */
-
-
     video:-webkit-media-controls-fullscreen-button{
         display: none;
         object-fit: cover;
@@ -69,34 +26,21 @@
 
     .slideshow-container {
         z-index: 15;
-        /* max-width: 80vw; */
         width: 100%;
         height: 30vw;
         position: relative;
         margin: auto;
-        /* padding: 7vw; */
-
-        /* margin-left: -400px; */
-
         margin-top: 150px;
         border-radius: 2%;
         background-color: transparent;
         opacity: .9;
-        /* background-color: rgba(0,0,0,0.5); */
     }
 
 
  .mySlides{
-         /* margin: 40vw; */
-         /* padding: auto; */
         margin-left: 15vw;
         margin-right: 40vw;
     }
-
-    /* .emptySlide{
-        background-color: transparent;
-        opacity: .9;
-    } */
 
     p {
         color: #ff9a00;
@@ -141,8 +85,6 @@
         transition-duration: 0.4s;
         -webkit-transition: -webkit-transform 3s ease-in-out;
         transition: transform 3s ease-in-out;
-
-        /* transform: scale(.5); */
         background: url('/imgs/sprite_jar_icon_55sprites_129by130tile.png') left center;
     }
 
@@ -171,13 +113,10 @@
       }
     } */
 
-
-
     .tweet_button{
         z-index:5;
         position: absolute;
         opacity: 0;
-        /* margin-top: 5px; */
         margin-left: -19px;
         border-radius: 20px;
     }
@@ -186,8 +125,6 @@
         z-index:3;
         position: absolute;
         opacity: .1;
-        /* margin-left:139px;
-        margin-top: 35px; */
         margin-top: 25px;
         width: 73px;
         height: 71px;
@@ -239,47 +176,20 @@
                 transform: rotate(360deg);
     }
 
-    /* @media only screen and (max-device-width: 480px) {
-        .hud {
-            float: right;
-            margin-right: 100px;
-            flex-direction: column;
-        }
-        .jar {
-          margin-right: 7vw;
-          margin-top: 360px;
-        }
-        .jar_image{
-            transform: scale(1.5);
-        }
-        .tweet{
-          margin-top: 390px;
-        }
-        .tweet_image{
-            transform: scale(2);
-        }
-        .github{
-          margin-top: 390px;
-        }
-        .github_image{
-            transform: scale(1.5);
-        }
-    } */
-
     @media only screen and (orientation:portrait) {
-        .slideshow-container {margin-top: 100px;}
+        .slideshow-container {
+            margin-top: 50px;
+            margin-left: -10px;
+        }
         .author{
             margin-top: 29vw;
-            margin-right: -10vw;
-
         }
         .hud {
-            /* float: right; */
             position: absolute;
             top: 50%;
             left: 50%;
             margin-top: -50px;
-            margin-left: -50px;
+            margin-left: -80px;
             flex-direction: column;
             background-color: transparent;
         }
@@ -293,7 +203,6 @@
         }
         .tweet{
           position: 2;
-          /* margin-right: 9vw; */
           margin-top: -15vw;
         }
         .tweet_image{
@@ -309,42 +218,6 @@
         }
     }
 
-    /* @media only screen and (orientation:landscape) {
-        .tweet{
-          order: 3;
-        }
-        .github{
-          margin-top: 25px;
-          order: 2;
-        }
-    } */
-
-    /* @media (max-width:500px) {
-        .hud{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 3;
-            padding: 3vw;
-            margin-left: -10vw;
-        }
-
-      .jar {
-        order: 3;
-        margin-right: 10vw;
-        margin-top: 260px
-      }
-      .tweet{
-        order: 2;
-        margin-top: 290px
-      }
-      .github{
-        order: 1;
-        margin-top: 290px
-      }
-    } */
-
     .dynamic, .static {
         position: absolute;
         min-width: 100%;
@@ -355,38 +228,13 @@
         width: 100vw;
         height: 100vh;
         opacity: 1;
-        /* background-color: black; */
     }
 
     .dynamic{
         z-index: 1
     }
 
-.sprite_test{
-    position:absolute;
-    bottom:450px;
-    left:25%;
-    width: 640px;
-    height: 360px;
-    background: url('/imgs/idle_sprite_test.png') left center;
-    animation: idle 2.5s steps(27) infinite;
-}
-
-.static_sprite_background{
-    /* adds a static background of open eyes for when the animation 'pops' out */
-    position:absolute;
-    bottom:450px;
-    left:25%;
-    width: 640px;
-    height: 360px;
-}
-
-@keyframes idle{
-  from{background-position-x:0px;}
-  to{background-position-x:-17280px;}
-}
-
-/* Fading animation */
+/* Fading animation for slides / tweets */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 9s;
