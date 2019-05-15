@@ -39,6 +39,10 @@ var slides = document.getElementsByClassName("mySlides");
 let storeSlideIndex;
 var slideIndex = 1;
 
+// Boolean to stop the storeSlideIndex from being set to 1 between tweets.
+// A 'true' value lets the program set the storeSlideIndex.
+let storeSlideIndexBoolean = true;
+
 //Slide functions not my own. Found off line
 showSlides(slideIndex);
 // Next/previous controls
@@ -65,8 +69,8 @@ function showSlides(n) {
 
 // Tweet button functionality. Tweets the currently displayed tweet.
 button_tweet.addEventListener('click', function(e){
-    tweet = slides[slideIndex].children[0].innerHTML
-    author = slides[slideIndex].children[1].innerHTML
+    tweet = slides[slideIndex-1].children[0].innerHTML
+    author = slides[slideIndex-1].children[1].innerHTML
     location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
 })
 
@@ -75,7 +79,10 @@ button_jar.addEventListener('click', function(e){
     if (slideIndex > slides.length - 1 ) {slideIndex = 1};
     console.log(slideIndex)
     let number = slides[slideIndex].children[2].innerHTML;
-    storeSlideIndex = slideIndex; // store the current slide index.
+    if (storeSlideIndexBoolean){
+        storeSlideIndex = slideIndex; // store the current slide index.
+        storeSlideIndexBoolean = false;
+    }
     setEmptySlide(); // hide the slide to show the shock.
     video.setAttribute("src", shocks[number]);
     video.playbackRate = 1.5;
@@ -83,12 +90,9 @@ button_jar.addEventListener('click', function(e){
 })
 
 // Once the shock clip is finished playing...
-// NOTE: !ERROR! If someone presses the Jar button before the slideIndex
-// is reset slideIndex is reset to 1.
-// Need to implement a boolean that is controlled by the below code block.
-// that stops the storeSlideIndex from being overwritten with '1' (the temporary value).
 video.onended = function(e) {
     slideIndex = storeSlideIndex // Reset the slideIndex
+    storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
     plusSlides(1) // Increment the slideIndex
     video.setAttribute("src", clip); // Reset the video clip to idle.
     video.load();
