@@ -52,7 +52,7 @@ var status;
 	 let tweets = []
  app.get('/', (req, res) => {
 	 let count = 0
-	 while (count < 25){
+	 while (count < 10){
 		let msg;
      // tweet_Grimm = generator.run(0);
      // tweet_Poe = generator.run(1);

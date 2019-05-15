@@ -6,6 +6,8 @@ video.playbackRate = 1;
 let firstTweetGenerated = false;
 let tweetThis = false;
 
+// let slideShow_container = document.getElementById('slideShow_container');
+
 const button_9 = document.getElementById("Tweet");
 const button_10 = document.getElementById("Jar");
 const button_11 = document.getElementById("Github");
@@ -42,20 +44,23 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.display = "block";
 }
 
 button_9.addEventListener('click', function(e){
-    tweet = slides[slideIndex-1].children[0].innerHTML
-    author = slides[slideIndex-1].children[1].innerHTML
+    tweet = slides[slideIndex].children[0].innerHTML
+    author = slides[slideIndex].children[1].innerHTML
     location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
 })
 
 button_10.addEventListener('click', function(e){
-    if (slideIndex+1 > slides.length) {slideIndex = 1};
-    let number = slides[slideIndex+1].children[2].innerHTML;
-    console.log(number)
+    if (slideIndex > slides.length) {slideIndex = 1};
+    console.log(slideIndex, slides[slideIndex].children[0].innerHTML)
+    let number = slides[slideIndex].children[2].innerHTML;
+    // console.log(slides[slideIndex+1].children[2].innerHTML)
     storeSlideIndex = slideIndex;
     setEmptySlide();
+    // slideShow_container.style.backgroundColor = 'transparent';
     video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.setAttribute("src", shocks[number]);
     video.playbackRate = 1.5;
@@ -63,11 +68,14 @@ button_10.addEventListener('click', function(e){
 })
 
 video.onended = function(e) {
-    plusSlides(storeSlideIndex+1)
+    slideIndex = storeSlideIndex
+    plusSlides(1)
+    // slideShow_container.style.backgroundColor = 'black';
     video.setAttribute("src", clip);
     video.load();
     video.playbackRate = 1.3;
     video.loop = true;
+    // console.log(slideIndex+1,slides[slideIndex].children[2].innerHTML)
 };
 
 button_11.addEventListener('click', function(e){

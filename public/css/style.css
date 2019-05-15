@@ -2,6 +2,49 @@
         background-color: black;
     }
 
+
+
+    #container { display:block; }
+
+    @media only screen and (orientation:portrait){
+
+      #container {
+
+        height: 100vw;
+
+        -webkit-transform: rotate(90deg);
+
+        -moz-transform: rotate(90deg);
+
+        -o-transform: rotate(90deg);
+
+        -ms-transform: rotate(90deg);
+
+        transform: rotate(90deg);
+
+      }
+
+    }
+
+    @media only screen and (orientation:landscape){
+
+      #container {
+
+         -webkit-transform: rotate(0deg);
+
+         -moz-transform: rotate(0deg);
+
+         -o-transform: rotate(0deg);
+
+         -ms-transform: rotate(0deg);
+
+         transform: rotate(0deg);
+
+      }
+
+    }
+
+
     video:-webkit-media-controls-fullscreen-button{
         display: none;
         object-fit: cover;
@@ -26,20 +69,28 @@
 
     .slideshow-container {
         z-index: 15;
-        max-width: 2000px;
+        /* max-width: 80vw; */
+        width: 100%;
+        height: 30vw;
         position: relative;
         margin: auto;
-        padding: 7vw;
+        /* padding: 7vw; */
+
         /* margin-left: -400px; */
-        margin-top: 75px;
-        border-radius: 3%;
+
+        margin-top: 150px;
+        border-radius: 2%;
+        background-color: transparent;
+        opacity: .9;
+        /* background-color: rgba(0,0,0,0.5); */
     }
 
-    .myslides{
-        display: flex;
-        flex-flow: column;
-        /* background-color: black;
-        opacity: .9; */
+
+ .mySlides{
+         /* margin: 40vw; */
+         /* padding: auto; */
+        margin-left: 15vw;
+        margin-right: 40vw;
     }
 
     /* .emptySlide{
@@ -54,11 +105,8 @@
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         opacity: 1;
         font-size: 3vw;
-        /* top: 50%;
-        left: 50%;
-         z-index: 15;*/
-        margin-left: -5vw;
-        margin-top: -25vw;
+        margin-left: -7vw;
+        margin-top: 50vw;
     }
 
     .author {
@@ -67,10 +115,12 @@
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         opacity: 1;
         font-size: 3vw;
-        /* top: 50%;
-        left: 50%; */
         margin-left: 50vw;
-        margin-top: 30vw;
+        margin-top: 13vw;
+    }
+
+    .number{
+        opacity: 0;
     }
 
     .jar_button{
@@ -216,7 +266,7 @@
         }
     } */
 
-    @media only screen and (orientation:portrait) {
+    /* @media only screen and (orientation:portrait) {
         .hud {
             float: right;
             margin-right: 100px;
@@ -278,7 +328,7 @@
         order: 1;
         margin-top: 290px
       }
-    }
+    } */
 
     .dynamic, .static {
         position: absolute;
@@ -324,18 +374,18 @@
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 9s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 9s;
     animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: 0}
+  to {opacity: .9}
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: 0}
+  to {opacity: .9}
 }
