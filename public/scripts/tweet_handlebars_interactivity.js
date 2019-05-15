@@ -52,8 +52,9 @@ function showSlides(n) {
 }
 
 button_9.addEventListener('click', function(e){
-    tweet = slides[slideIndex].children[0].innerHTML
-    author = slides[slideIndex].children[1].innerHTML
+    if (slideIndex-1 < 2) {slideIndex = slides.length-1}
+    tweet = slides[slideIndex-1].children[0].innerHTML
+    author = slides[slideIndex-1].children[1].innerHTML
     location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
 })
 
