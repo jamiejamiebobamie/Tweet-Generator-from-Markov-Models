@@ -76,8 +76,9 @@ button_tweet.addEventListener('click', function(e){
 
 // Jar button functionality. Cycles through the tweets/slides and picks the correct shock to play.
 button_jar.addEventListener('click', function(e){
+    // console.log(Math.floor( Math.random() * Math.floor(7)))
     if (slideIndex > slides.length - 1 ) {slideIndex = 1};
-    console.log(slideIndex)
+    // console.log(slideIndex)
     let number = slides[slideIndex].children[2].innerHTML;
     if (storeSlideIndexBoolean){
         storeSlideIndex = slideIndex; // store the current slide index.

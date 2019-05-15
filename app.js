@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 	 let tweets = []
 	 let count = 0
 	 while (count < 30){
-	 	tweet = generator.run( Math.floor( Math.random() * Math.floor(6)))
+	 	tweet = generator.run( Math.floor( Math.random() * Math.floor(7)))
 		let msg = {
 			 body: tweet[0],
 			 author: tweet[1],
