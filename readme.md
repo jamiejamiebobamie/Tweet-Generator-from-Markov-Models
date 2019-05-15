@@ -1,13 +1,13 @@
-This is a series of files related to a tweet-generator tutorial offered by Make School, San Francisco.
+Dead Writer Tweet Generator
 
-Currently, working on text-generator.py, but will conclude by writing tweet-gen.py.
+![alt text](./public/imgs/icon_jar.png)
 
-To call the program, in terminal type:
+This a web app that generates new text from the works of dead writers. There are currently 7 dead authors on the site:
 
-python3 text-generator.py NAMEofTEXTfile WORD NUMBERofWORDStoLOOKbackward
+The Brother's Grimm, Edgar Allan Poe, Oscar Wilde, Virginia Woolf, Lewis Carroll, William Shakespeare, and HP Lovecraft.
 
-Example:
+The new text is generated using Markov models in public/scripts/tweet.js and can be tweeted from the web app to the 'dead-writers' Twitter account.
 
-python3 text-generator.py Rowling.md happy 15
+This project is no longer in active development. If you have any questions or comments regarding the app, please contact me at jamie.mccrory@students.makeschool.com.
 
-happy day!" and wizardry. please find the other. it was going on, "is that they saw on alchemy with a lot of the discovery of the discovery of
+http://dead-tweet-gen.herokuapp.com

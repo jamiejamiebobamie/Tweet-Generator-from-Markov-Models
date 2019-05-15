@@ -72,7 +72,6 @@ app.get('/', (req, res) => {
 	 var postBody = {
 	 	'status': status
 	 };
-	 // console.log('Ready to Tweet article:\n\t', postBody.status);
 	 oauth.post('https://api.twitter.com/1.1/statuses/update.json',
 	 	twitter_user_access_token,  // oauth_token (user access token)
 	     twitter_user_secret,  // oauth_secret (user secret)

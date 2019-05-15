@@ -121,7 +121,6 @@ module.exports.run = function (notRandom){
     let tweet = word.charAt(0).toUpperCase() + word.slice(1)
     let tweetArray = []
 
-    // while (tweet.length < 110) {
     while (tweetArray.length < 20) {
         let arrayOfInstances = wordBeforeAfter(fileArray, word, n); // file to array of words
         let nexts = nextWords(arrayOfInstances); // next words
@@ -144,11 +143,9 @@ module.exports.run = function (notRandom){
             word = valuesDictionary[values[random_index_into_values]][Math.floor(Math.random() * Math.floor(valuesDictionary[values[random_index_into_values]].length - 1))] // random index out of the array of words for frequency 'v'
         }
         tweetArray.push(word)
-        // tweet = tweet + " " + word
     }
 
     tweet += arrayToString(tweetArray) + "."
-    // tweet += "."
     let author = file.slice(0, -3)
     return [tweet, myAuthors[author], notRandom]
 }
