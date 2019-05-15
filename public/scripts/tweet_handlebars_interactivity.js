@@ -52,21 +52,23 @@ function showSlides(n) {
 }
 
 button_9.addEventListener('click', function(e){
-    if (slideIndex-1 < 2) {slideIndex = slides.length-1}
+    // if (slideIndex-1 <= 1) {tweetIndex = slides.length-2}
     tweet = slides[slideIndex-1].children[0].innerHTML
     author = slides[slideIndex-1].children[1].innerHTML
+    // console.log(tweet, slideIndex)
     location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
 })
 
 button_10.addEventListener('click', function(e){
     if (slideIndex > slides.length) {slideIndex = 1};
-    console.log(slideIndex, slides[slideIndex].children[0].innerHTML)
+    // console.log(slideIndex, slides.length)
     let number = slides[slideIndex].children[2].innerHTML;
-    // console.log(slides[slideIndex+1].children[2].innerHTML)
+    // console.log(slideIndex, slides[slideIndex].children[0].innerHTML)
+    // console.log(slides[slideIndex].children[2].innerHTML)
     storeSlideIndex = slideIndex;
     setEmptySlide();
     // slideShow_container.style.backgroundColor = 'transparent';
-    video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
+    // video.setAttribute("src", shocks[Math.floor(Math.random() * Math.floor(shocks.length))]);
     video.setAttribute("src", shocks[number]);
     video.playbackRate = 1.5;
     video.loop = false;
