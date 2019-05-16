@@ -104,7 +104,7 @@ button_tweet.addEventListener('click', function(e){
     tweet = slides[slideIndex-1].children[0].innerHTML
     author = slides[slideIndex-1].children[1].innerHTML
     tweet_this = true;
-    setEmptySlide(); // hide the slide to show the shock.
+    // setEmptySlide(); // hide the slide to show the door opening.
     video.setAttribute("src", open);
     video.playbackRate = 1;
     video.loop = false;
@@ -113,7 +113,7 @@ button_tweet.addEventListener('click', function(e){
 // Github button functionality. Links to my Github.
 button_github.addEventListener('click', function(e){
     go_to_github = true;
-    setEmptySlide(); // hide the slide to show the shock.
+    setEmptySlide(); // hide the slide to show the door opening.
     video.setAttribute("src", open);
     video.playbackRate = 1;
     video.loop = false;
