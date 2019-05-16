@@ -189,10 +189,9 @@
     }
 
     @media only screen and (orientation:portrait) {
-        /* .slideshow-container {
-            margin-top: 30px;
-            margin-left: -10px;
-        } */
+        .slideshow-container {
+            margin-top: 5vw;
+        }
         .author{
             margin-top: 15vw;
         }
