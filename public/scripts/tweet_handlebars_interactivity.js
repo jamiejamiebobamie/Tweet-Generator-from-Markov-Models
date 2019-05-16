@@ -19,9 +19,13 @@ $(window).resize(function(){
     });
 }).resize();
 
+let tweet;
+let author;
+
 // NOT IMPLEMENTED: Booleans to control the CSS animations to guide UX.
 let firstTweetGenerated = true;
-let tweetThis = false;
+let tweet_this = false;
+let go_to_github = false;
 
 // Buttons from the navbar/'hud'
 const button_tweet = document.getElementById("Tweet");
@@ -29,8 +33,9 @@ const button_jar = document.getElementById("Jar");
 const button_github = document.getElementById("Github");
 
 // Idle clip and shock clips, shocks in order from left to right.
-var clip = "/videos/idle1.mp4";
+const idle = "/videos/idle1.mp4";
 const shocks = ["/videos/jar1-final.mp4", "/videos/jar2-final-C.mp4", "/videos/jar3-final-D.mp4", "/videos/jar4-final-F.mp4", "/videos/jar5-final-F.mp4", "/videos/jar6-final-B.mp4", "/videos/jar7-final-B.mp4"]
+const open = "/videos/door-opening.mp4";
 
 //Tweets are sent to html div mySlides through node.js and handlebars {{each}} method.
 var slides = document.getElementsByClassName("mySlides");
@@ -98,7 +103,20 @@ function unfade(element) {
 button_tweet.addEventListener('click', function(e){
     tweet = slides[slideIndex-1].children[0].innerHTML
     author = slides[slideIndex-1].children[1].innerHTML
-    location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
+    tweet_this = true;
+    setEmptySlide(); // hide the slide to show the shock.
+    video.setAttribute("src", open);
+    video.playbackRate = 1;
+    video.loop = false;
+})
+
+// Github button functionality. Links to my Github.
+button_github.addEventListener('click', function(e){
+    go_to_github = true;
+    setEmptySlide(); // hide the slide to show the shock.
+    video.setAttribute("src", open);
+    video.playbackRate = 1;
+    video.loop = false;
 })
 
 // Jar button functionality. Cycles through the tweets/slides and picks the correct shock to play.
@@ -122,23 +140,35 @@ button_jar.addEventListener('click', function(e){
 
 // Once the shock clip is finished playing...
 video.onended = function(e) {
-    slideIndex = storeSlideIndex // Reset the slideIndex
-    storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
 
-    // slideShow_container.style.backgroundColor = 'black';
-    // unfade(slideShow_container)
+    if (tweet_this){
+        slideIndex = storeSlideIndex // Reset the slideIndex
+        storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
+        tweet_this = false;
+        go_to_github = false;
+        location.href='/new_tweet/' + tweet.toString() + " " + author.toString()
+    }
+    else if (go_to_github){
+        slideIndex = storeSlideIndex // Reset the slideIndex
+        storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
+        tweet_this = false;
+        go_to_github = false;
+        location.href='https://github.com/jamiejamiebobamie/tweet-gen-js';
+    }
+    else {
+        slideIndex = storeSlideIndex // Reset the slideIndex
+        storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
+        // slideShow_container.style.backgroundColor = 'black';
+        // unfade(slideShow_container)
 
-    plusSlides(1) // Increment the slideIndex
-    video.setAttribute("src", clip); // Reset the video clip to idle.
-    video.load();
-    video.playbackRate = 1.3;
-    video.loop = true;
+        plusSlides(1) // Increment the slideIndex
+        video.setAttribute("src", idle); // Reset the video clip to idle.
+        video.load();
+        video.playbackRate = 1.3;
+        video.loop = true;
+    }
+
 };
-
-// Github button functionality. Links to my Github.
-button_github.addEventListener('click', function(e){
-    location.href='https://github.com/jamiejamiebobamie/tweet-gen-js';
-})
 
 
 //NOT IMPLEMENTED. Glitch effect for text.

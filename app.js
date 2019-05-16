@@ -52,7 +52,7 @@ const port = process.env.PORT || 13000;
 app.get('/', (req, res) => {
 	 let tweets = []
 	 let count = 0
-	 while (count < 30){
+	 while (count < 15){
 	 	tweet = generator.run( Math.floor( Math.random() * Math.floor(7)))
 		let msg = {
 			 body: tweet[0],
