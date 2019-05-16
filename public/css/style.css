@@ -190,7 +190,7 @@
 
     @media only screen and (orientation:portrait) {
         .slideshow-container {
-            margin-top: 5vw;
+            margin-top: -5vw;
         }
         .author{
             margin-top: 15vw;
