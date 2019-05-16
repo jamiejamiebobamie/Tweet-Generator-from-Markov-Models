@@ -39,28 +39,36 @@
 
 
  .mySlides{
-        margin-top: 18vw;
+        margin-top: 10vw;
         margin-left: 10vw;
         /* margin-right: 50vw; */
     }
 
     p {
         /* color: rgb(29,185,126); */
-        color: #00FA9A;
+        color: white;
+        /* color: #00FA9A; */
         position: absolute;
         z-index: 16;
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        /* font-family: 'Roboto', Arial, Helvetica, sans-serif; */
+        font-family: 'Optima', sans-serif;
         opacity: 1;
         font-size: 3vw;
-        margin-left: -9vw;
-        padding: 3vw;
+        /* margin-left: -9vw; */
+        /* padding-left: 2vw; */
+        padding-right: 10vw;
+        padding-top: 2vw;
         /* margin: 5vw; */
     }
 
     .author {
-        color: #00FA9A;
+        /* color: #00FA9A; */
+        color: white;
+
         position: absolute;
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-family: 'Optima', sans-serif;
+
+        /* font-family: 'Roboto', Arial, Helvetica, sans-serif; */
         opacity: 1;
         font-size: 3vw;
         margin-left: 50vw;

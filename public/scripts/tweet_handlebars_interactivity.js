@@ -20,7 +20,7 @@ $(window).resize(function(){
 }).resize();
 
 // NOT IMPLEMENTED: Booleans to control the CSS animations to guide UX.
-let firstTweetGenerated = false;
+let firstTweetGenerated = true;
 let tweetThis = false;
 
 // Buttons from the navbar/'hud'
@@ -109,8 +109,10 @@ button_jar.addEventListener('click', function(e){
         storeSlideIndex = slideIndex; // store the current slide index.
         storeSlideIndexBoolean = false;
     }
-    fade(slideShow_container)
+
+    // fade(slideShow_container)
     // slideShow_container.style.backgroundColor = 'transparent';
+
     // slideShow_container.style.opacity = 0
     setEmptySlide(); // hide the slide to show the shock.
     video.setAttribute("src", shocks[number]);
@@ -122,8 +124,10 @@ button_jar.addEventListener('click', function(e){
 video.onended = function(e) {
     slideIndex = storeSlideIndex // Reset the slideIndex
     storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
-    slideShow_container.style.backgroundColor = 'black';
-    unfade(slideShow_container)
+
+    // slideShow_container.style.backgroundColor = 'black';
+    // unfade(slideShow_container)
+
     plusSlides(1) // Increment the slideIndex
     video.setAttribute("src", clip); // Reset the video clip to idle.
     video.load();
