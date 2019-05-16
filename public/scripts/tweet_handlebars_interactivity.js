@@ -67,6 +67,33 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
+//https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
+function fade(element) {
+    var op = .5;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 25);
+}
+
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= .7){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 50);
+}
+
 // Tweet button functionality. Tweets the currently displayed tweet.
 button_tweet.addEventListener('click', function(e){
     tweet = slides[slideIndex-1].children[0].innerHTML
@@ -76,14 +103,15 @@ button_tweet.addEventListener('click', function(e){
 
 // Jar button functionality. Cycles through the tweets/slides and picks the correct shock to play.
 button_jar.addEventListener('click', function(e){
-    // console.log(Math.floor( Math.random() * Math.floor(7)))
     if (slideIndex > slides.length - 1 ) {slideIndex = 1};
-    // console.log(slideIndex)
     let number = slides[slideIndex].children[2].innerHTML;
     if (storeSlideIndexBoolean){
         storeSlideIndex = slideIndex; // store the current slide index.
         storeSlideIndexBoolean = false;
     }
+    fade(slideShow_container)
+    // slideShow_container.style.backgroundColor = 'transparent';
+    // slideShow_container.style.opacity = 0
     setEmptySlide(); // hide the slide to show the shock.
     video.setAttribute("src", shocks[number]);
     video.playbackRate = 1.5;
@@ -94,6 +122,8 @@ button_jar.addEventListener('click', function(e){
 video.onended = function(e) {
     slideIndex = storeSlideIndex // Reset the slideIndex
     storeSlideIndexBoolean = true; // Allow the storeSlideIndex to be set to the current slideIndex
+    slideShow_container.style.backgroundColor = 'black';
+    unfade(slideShow_container)
     plusSlides(1) // Increment the slideIndex
     video.setAttribute("src", clip); // Reset the video clip to idle.
     video.load();
