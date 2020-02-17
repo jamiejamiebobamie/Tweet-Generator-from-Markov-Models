@@ -13,6 +13,8 @@ There are currently 7 dead authors on the site:
 
 The new text is generated using Markov model in **public/scripts/tweet.js** and can be tweeted from the web app to the 'dead-writers' Twitter account.
 
+The original code was written in Python as part of a class project. The repo for the class can be found here: https://github.com/jamiejamiebobamie/tweet-generator.
+
 This project is no longer in active development. If you have any questions or comments regarding the app, please contact me at jmccrory@vt.edu.
 
 ## Deployment
