@@ -11,7 +11,7 @@ There are currently 7 dead authors on the site:
 * William Shakespeare
 * HP Lovecraft
 
-The new text is generated using Markov model in **public/scripts/tweet.js** and can be tweeted from the web app to the 'dead-writers' Twitter account.
+The new text is generated using Markov models in **public/scripts/tweet.js** and can be tweeted from the web app to the 'dead-writers' Twitter account.
 
 The original code was written in Python as part of a class project. The repo for the class can be found here: https://github.com/jamiejamiebobamie/tweet-generator.
 
