@@ -43,4 +43,6 @@ The text cleaning process that happens before the Markov model is built does not
 
 A Markov model is "a stochastic model used to model randomly changing systems."
 
+-https://en.wikipedia.org/wiki/Markov_model
+
 ![alt text](./public/imgs/icon_jar.png)
