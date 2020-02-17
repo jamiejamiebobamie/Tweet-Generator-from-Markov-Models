@@ -1,7 +1,7 @@
 # Dead Writer Tweet Generator
 
-This a web app that generates new text from the works of dead writers.
-There are currently 7 dead authors on the site:
+This is a web app that generates new text from the works of deceased writers.
+There are currently 7 authors on the site:
 
 * The Brother's Grimm
 * Edgar Allan Poe
@@ -37,7 +37,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Flaws
 
-The text cleaning process that happens before the Markov model is built does not clean the text for newline characters: '/n' which end up as their own tokens within the histogram. To create a better Markov model, newline characters should have been removed and punctuation should have been tokenized. Right now punctuation is part of the words they appear next to. So for example: "girl" and "girl!" are two different tokens. These two changes would have greatly improved the quality of the tweets and remain the focus of future efforts.
+* '\n' -- newline characters: The text cleaning process that happens before the Markov model is built everytime the site launches, does not clean the text for newline characters: '/n' which end up as their own tokens within the histogram. To create a better Markov model, newline characters should have been removed.
+* punctuation tokenization: Punctuation marks should have been tokenized. Right now punctuation is part of the words they appear next to. So for example: "girl" and "girl!" are two different tokens.
+
+These two changes would have greatly improved the quality of the tweets and remain the focus of future efforts.
 
 ## Note
 
