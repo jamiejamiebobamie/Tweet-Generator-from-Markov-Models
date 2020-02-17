@@ -17,7 +17,7 @@
     "oauth": "^0.9.15",
     "save": "^2.3.2",
     "twitter": "^1.7.1",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {},
   "scripts": {
