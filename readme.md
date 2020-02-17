@@ -39,4 +39,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 The text cleaning process that happens before the Markov model is built does not clean the text for newline characters: '/n' which end up as their own tokens within the histogram. To create a better Markov model, newline characters should have been removed and punctuation should have been tokenized. Right now punctuation is part of the words they appear next to. So for example: "girl" and "girl!" are two different tokens. These two changes would have greatly improved the quality of the tweets and remain the focus of future efforts.
 
+## Note
+
+A Markov model is "a stochastic model used to model randomly changing systems."
+
 ![alt text](./public/imgs/icon_jar.png)
