@@ -37,10 +37,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Flaws
 
-### '\n' -- newline characters
-* The text cleaning process that happens before the Markov model is built everytime the site launches, does not clean the text for newline characters: '/n' which end up as their own tokens within the histogram. To create a better Markov model, newline characters should have been removed.
+### '\n', newline characters
+* Everytime the site launches, there is a text cleaning process that happens before the Markov model is built. Currently this process does not remove newline characters: '/n' which end up as their own tokens within the histogram. To create a better Markov model, newline characters should have been removed.
 ### punctuation tokenization
-* Punctuation marks should have been tokenized. Right now punctuation is part of the words they appear next to. So for example: "girl" and "girl!" are two different tokens.
+* Punctuation marks should have been tokenized. Right now punctuation is part of the words they appear next to. So for example: "girl" and "girl!" are considered to be two different tokens.
 
 These two changes would have greatly improved the quality of the tweets and remain the focus of future efforts.
 
