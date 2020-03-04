@@ -19,7 +19,7 @@ This project is no longer in active development. If you have any questions or co
 
 ## Deployment
 
-The live site: http://dead-tweet-gen.herokuapp.com contains the working Markov model. Please visit the site to playaround with the built model.
+Click here for the live site: http://dead-tweet-gen.herokuapp.com.
 
 ## Built With
 
