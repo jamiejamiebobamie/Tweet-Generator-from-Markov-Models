@@ -1,6 +1,7 @@
 # Dead Writer Tweet Generator
 
-[Live Site](http://dead-tweet-gen.herokuapp.com.)
+[Live Site](http://dead-tweet-gen.herokuapp.com).
+
 This is a web app that generates new text from the works of deceased writers.
 There are currently 7 authors on the site:
 
